@@ -1,0 +1,26 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   06-07-2016
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 22-07-2016
+
+.search {
+  background-color: #cecece;
+}
+
+ion-header.scroll {
+    box-shadow: 0px 1px 8px #b6b6b6;
+}
+ion-searchbar{
+  background-color: #ffffff;
+}
+input.searchbar-input {
+    box-shadow: none;
+    border-bottom: solid 1px color($colors, primary);
+}
+.ion-md-arrow-back {
+  color: color($colors, primary);
+}
+.searchbar-search-icon {
+  color: color($colors, secondary);
+}

@@ -1,0 +1,34 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   23-07-2016
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 24-08-2016
+
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Shared Imports
+// --------------------------------------------------
+// These are the imports which make up the design of this app.
+// By default each design mode includes these shared imports.
+// App Shared Sass variables belong in app.variables.scss.
+
+@import "../pages/home/home";
+
+@import "../pages/search/search.scss";
+@import "../pages/add/add.scss";
+@import "../pages/product/product.scss";
+
+@import "../pages/user/user.scss";
+@import "../pages/about/about.scss";
+@import "../pages/history/history.scss";
+
+body {
+  background: #03A9F4;
+}
+.text-secondary {
+  color:#FF4081;
+}
+*, h1, h2, h3, h4, .line-badge {
+  font-weight: 100;
+}

@@ -1,0 +1,29 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   02-09-2016
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 03-09-2016
+-->
+
+<!--
+  Generated template for the ProductAlergensTraces component.
+
+  See https://angular.io/docs/ts/latest/api/core/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+<div class="acc-item">
+  <h3 (click)="onClickToggle($event)" padding class="acc-title">
+    Allergènes et Traces ({{arrayData.length}})
+    <span><ion-icon name="ios-add"></ion-icon></span>
+  </h3>
+  <div class="acc-content">
+    <div padding>
+      <span *ngFor="let data of arrayData" >
+        <ion-badge class="line-badge">
+          {{ data }}
+        </ion-badge>
+      </span>
+    </div>
+  </div>
+</div>

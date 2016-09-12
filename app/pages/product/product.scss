@@ -1,0 +1,252 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   18-07-2016
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 31-08-2016
+
+.product {
+
+}
+ion-title {
+  transition: 0.3s all ease;
+}
+ion-header, .toolbar, h1{
+  transition: 0.3s all ease;
+}
+.product-header.fixed{
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  background: #fff;
+  z-index: 2;
+}
+.toolbar.scroll {
+  box-shadow: 0px 1px 8px #b6b6b6;
+}
+
+.opacity {
+  opacity: 0;
+}
+product-focus, .product-notfound-header {
+  background : color($colors, primary);
+}
+.line-badge {
+  background: none;
+  border: solid 1px color($colors, secondarytext);
+  color: #2d2d2d;
+  margin: 3px;
+}
+.additive.line-badge {
+  background: none;
+  border: solid 0px color($colors, secondarytext);
+  color: #2d2d2d;
+  margin: 3px;
+  color: #fff;
+  font-weight: 400!important;
+}
+ion-badge {
+  padding: 5px 10px;
+  border-radius: 100px;
+}
+.focusTab {
+  padding: 45px 0px 10px;
+  background-color: color($colors, primary)
+}
+.sugarZone {
+  height: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  transform: rotate(180deg);
+  transform: rotateX(180deg);
+}
+.sugar {
+    display: inline-block;
+    vertical-align: top;
+    height: 5rem;
+    background: #fff;
+    border: solid 2px #727272;
+    border-radius:3px;
+    box-shadow: 2px -4px 0px #727272;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+      opacity:0;
+      transition: 0.5s all ease;
+}
+.sugar:nth-child(odd) {
+    transform:rotate(1deg);
+}
+
+.sugar:nth-child(even) {
+    transform:rotate(-1deg);
+}
+.swiper-wrapper {
+  margin-bottom: 40px;
+}
+.swiper-pagination-bullet {
+  background: #fff;
+}
+.slide-zoom h3 {
+  margin-top: 0rem;
+}
+/**** accordeon product detail ****/
+.acc-wrapper .acc-item,
+.acc-wrapper .acc-title,
+.acc-wrapper .acc-content {
+  display: block;
+}
+.acc-wrapper {
+  position:relative;
+  width: 100%;
+  /** height: 100%; **/
+}
+.acc-item {
+  overflow: hidden;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.acc-title {
+  padding: 16px;
+  margin: 0px;
+  color: color($colors, primary);
+  font-size: 1.8rem;
+}
+.acc-title > span {
+  float:right;
+}
+.acc-title > span {
+  float:right;
+  transition: 0.2s transform;
+}
+.acc-title > span.rotate {
+  transform: rotate(45deg);
+}
+.acc-content {
+  max-height: 1px;
+  border-bottom: solid 1px color($colors, primary);
+  transition: 0.3s max-height;
+}
+.acc-content.open {
+    max-height: 999px;
+}
+.acc-content > div {
+  padding-top:16px;
+  padding-bottom:32px;
+}
+
+/**** Product nutriment tab ****/
+.tb-wrapper,.tb-item,.tb-fullBG,.tb-resultBG  {
+  display:block;
+  width: 100%;
+  font-size: 14px;
+}
+.swiper-slide, .tb-wrapper * {
+  font-size: 14px;
+}
+.tb-wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.tb-item {
+  height: 32px;
+  margin: 10px 0px;
+  position: relative;
+}
+.tb-fullBG {
+  height: 32px;
+  background: #e4e4e4;
+
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.tb-resultBG {
+  width: auto;
+  height: 32px;
+  max-width: 100%;
+
+  position: absolute;
+  top:0;
+  left: 0;
+
+}
+.tb-oms{
+  width: 100%;
+  height: 2px;
+  background: #727272;
+  font-size: 14px;
+
+  position: relative;
+  top:-100px;
+  left: 0;
+  display: inherit;
+  transform: rotate(90deg);
+}
+.tb-oms-text{
+  background: #727272;
+  color: #fff;
+  padding: 6px 6px;
+  margin: -10px auto 0;
+  display: table;
+  font-size: 14px;
+}
+.tb-item-title {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 8px;
+
+}
+.tb-item-value {
+  position: absolute;
+  top:0;
+  right: 0;
+  padding: 8px;
+
+}
+.tb-unit {
+
+}
+/**** center content slide ****/
+ion-slide.swiper-slide {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/*** .product-notfound ***/
+.product-notfound-header{
+  padding-top:40px;
+  padding-bottom:50px;
+  margin-bottom:30px;
+}
+.product-notfound-header, .product-notfound-header *{
+  color: #fff;
+}
+
+/** btn FAB **/
+.button-fab {
+  z-index: 100;
+}
+
+.alert-message {
+    padding: 0 24px 0px 24px;
+}
+.alertTxt{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.alertTxt {
+  color:#e57373;
+}
+.alertTxt.green {
+  color:#81c784;
+}

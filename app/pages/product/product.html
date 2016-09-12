@@ -1,0 +1,44 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   18-07-2016
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 02-09-2016
+-->
+
+<!--
+  Generated template for the ProductPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+
+  [ngStyle]="{'top': scrollTopValue, 'background': '#fff'}"
+-->
+<ion-header id="scrollHeader" >
+    <header-content [isClassOpacity]="titleUnvisible" title="{{productName}}" (onBack)="onClickBack()" backEnabled={{true}}></header-content>
+</ion-header>
+
+<ion-content id="product-content" >
+  <div *ngIf="result === 1">
+
+    <product-header *ngIf="productData" [productDataHeaderInput]="productData" [isClassOpacity]="titleH1Unvisible"></product-header>
+    <product-focus *ngIf="focusData" [productFocusInput]="focusData"></product-focus>
+
+      <div class="acc-wrapper">
+
+          <product-nutriment *ngIf="nutriments" [nutrimentsInput]="nutriments" (onToggle)="onClickToggle($event)"></product-nutriment>
+
+          <product-ingredient *ngIf="ingredients" [ingredientsInput]="ingredients"  (onToggle)="onClickToggle($event)"></product-ingredient>
+
+          <product-additive *ngIf="additives_tags" [additiveInput]="additives_tags" (onModalOpen)="onClickModal($event)" (onToggle)="onClickToggle($event)"></product-additive>
+
+          <product-alergens-traces *ngIf="traceAndAlergens" [traceAndAlergensInput]="traceAndAlergens" (onModalOpen)="onClickModal($event)" (onToggle)="onClickToggle($event)"></product-alergens-traces>
+
+          <product-related *ngIf="categories_hierarchy" [categoriesInput]="categories_hierarchy" (onRelated)="onClickRelated($event,id)" (onToggle)="onClickToggle($event)"></product-related>
+
+      </div>
+  </div>
+  <div *ngIf="result === 0">
+    <product-notfound (clickBack)="onClickBack()" (clickAdd)="onClickAdd()" [productBarCodeInput]="productID"></product-notfound>
+  </div>
+</ion-content>

@@ -1,0 +1,27 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   25-07-2016
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 27-07-2016
+
+.user {
+
+}
+.login_list {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login_error {
+  color: color($colors, error);
+  text-align: center;
+}
+.table {
+    display: table;
+    height: 100%;
+    width:100%;
+}
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}

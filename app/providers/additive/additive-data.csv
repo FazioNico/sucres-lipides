@@ -1,0 +1,300 @@
+id|name|level|type|info
+100|Curcumine|0|colorants
+101|Lactoflavine|3|colorants
+102|Tartrazine|0|colorants
+104|Jaune de quinoleine|0|colorants
+110|Jaune orangé S|0|colorants
+120|Cochenille - acide carminique|0|colorants
+122|Azorubine|0|colorants
+123|Amarante|0|colorants
+124|Ponceau 4R|0|colorants
+127|Erythrosine|0|colorants
+128|Rouge 2G/azogéranine|0|colorants
+129|Rouge allura AC|0|colorants
+131|Bleu patenté V|0|colorants
+132|Indigotine|0|colorants
+133|Bleu brillant FCF|0|colorants
+140|Chlorophylles/phéophytine au magnésium|0|colorants
+141|Chlorophylles/Chlorophyllines|3|colorants
+142|Vert acide brillant BS|0|colorants
+150|Caramel ordinaire|3|colorants
+150c|Caramel ammoniacal - ammonium|0|colorants
+150d|Caramel ammoniacal - ammonium|0|colorants
+151|Noir brillant BN|0|colorants
+153|Carbo médicinalis vegetalis|3|colorants
+154|Brun FK|0|colorants
+155|Brun chocolat HT|0|colorants
+160|Carotènes mélangés de a à d|0|colorants
+161b|Lutéine jaune/rouge|0|colorants
+161g|Canthaxanthine|0|colorants
+162|Rouge betterave - bétanine|0|colorants
+163|Anthocyanes pourpre à violet|0|colorants
+170|Carbonates de calcium|3|colorants
+171|Dioxyde de titane|0|colorants
+172|Oxyde et hydroxyde de fer|3|colorants
+173|Aluminium|0|colorants
+174|Argent - argentum|0|colorants
+175|Or - aurum|0|colorants
+180|Litholrubine BK - pigment rubis - carmin 6B|0|colorants
+200|Acide sorbique|0|agents conservateurs
+201|Sorbates de sodium|3|agents conservateurs
+202|Sorbates de potassium|0|agents conservateurs
+203|Sorbates de calcium|0|agents conservateurs
+210|Acide benzoïque|0|agents conservateurs
+211|Benzoates de sodium|0|agents conservateurs
+212|Benzoates de potassium|0|agents conservateurs
+213|Benzoates de calcium|0|agents conservateurs
+214|Parahydroxybenzoate d'éthyle - propyle - méthyle et sels sodiques|0|agents conservateurs
+215|Parahydroxybenzoate d'éthyle - propyle - méthyle et sels sodiques|0|agents conservateurs
+216|Parahydroxybenzoate d'éthyle - propyle - méthyle et sels sodiques|0|agents conservateurs
+217|Parahydroxybenzoate d'éthyle - propyle - méthyle et sels sodiques|0|agents conservateurs
+218|Parahydroxybenzoate d'éthyle - propyle - méthyle et sels sodiques|0|agents conservateurs
+219|Parahydroxybenzoate d'éthyle - propyle - méthyle et sels sodiques|0|agents conservateurs
+220|Anhydride sulfureux et sulfite|0|agents conservateurs
+221|Anhydride sulfureux et sulfite|0|agents conservateurs
+222|Anhydride sulfureux et sulfite|0|agents conservateurs
+223|Anhydride sulfureux et sulfite|0|agents conservateurs
+224|Anhydride sulfureux et sulfite|0|agents conservateurs
+225|Anhydride sulfureux et sulfite|0|agents conservateurs
+226|Sulfite de calcium|0|agents conservateurs
+227|Sulfite acide de calcium|0|agents conservateurs
+228|Sulfite - acide de potassium|0|agents conservateurs
+230|Biphényle - diphényle|0|agents conservateurs
+231|Orthophénylphénol|0|agents conservateurs
+232|Orthophénylphénate de sodium|0|agents conservateurs
+234|Nisine|0|agents conservateurs
+235|Natamycine (pimaricin)|0|agents conservateurs
+236|Acide formique|3|agents conservateurs
+239|Hexaméthylène - tétramine|0|agents conservateurs
+242|Dicarbontate de dimethyle|3|agents conservateurs
+249|Nitrite de potassium|0|agents conservateurs
+250|Nitrite de sodium (divers)|0|agents conservateurs
+251|Nitrate de sodium (divers)|0|agents conservateurs
+252|Nitrate de potassium|0|agents conservateurs
+260|Acide acétique|3|acides, bases, sels
+261|Acétates de potassium|3|acides, bases, sels
+262|Diacétates de sodium|3|acides, bases, sels
+263|Acétates de calcium|3|acides, bases, sels
+270|Acide lactique|3|acides, bases, sels
+280|Acide propionique|0|agents conservateurs
+281|Propionates de sodium|0|agents conservateurs
+282|Propionates de calcium|0|agents conservateurs
+283|Propionates de potassium|0|agents conservateurs
+284|Acide borique|0|agents conservateurs
+285|Tétraborate de sodium|0|agents conservateurs
+290|Dioxyde de carbone|3|gaz
+296|Acide malique|3|acides, bases, sels
+297|Acide fumarique|3|acides, bases, sels
+300|Acide ascorbique|3|antioxydants
+301|Ascorbate de sodium|3|antioxydants
+302|Ascorbates de calcium / potassium|3|antioxydants
+304|Esters d'acides gras de l'acide ascorbique|3|antioxydants
+306|Tocophérols|3|antioxydants
+307|Tocophérols|3|antioxydants
+308|Tocophérols|3|antioxydants
+309|Tocophérols|3|antioxydants
+310|Gallate de propyle|0|antioxydants
+311|Gallate d'octyle|0|antioxydants
+312|Gallate de dodécyle|0|antioxydants
+315|Acide érythorbique|3|antioxydants
+316|Erythorbate de sodium|3|antioxydants
+320|Butylhydroxyanisol (BHA)|0|antioxydants
+321|Butylhydroxytoluène (BHT)|0|antioxydants
+322|Lécithine|3|émulsifiants
+325|Lactate d'ammonium/sodium|3|antioxydants
+326|Lactate de potassium|3|antioxydants
+327|Lactate de calcium|3|antioxydants
+330|Acide citrique|3|antioxydants
+331|Citrate de sodium|3|antioxydants
+332|Citrate de potassium|3|antioxydants
+333|Citrate de calcium|3|antioxydants
+334|Acide tartrique|3|antioxydants
+335|Tartrate d'ammonium/sodium|3|antioxydants
+336|Tartrate de potassium|3|antioxydants
+337|Tartrate de potassium / calcium / sodium|3|antioxydants
+338|Acide orthophosphorique|3|antioxydants
+339|Orthophosphates de sodium|3|antioxydants
+340|Orthophosphates de potassium|3|acides, bases, sels
+341|Orthophosphates de calcium|3|antioxydants
+343|Phosphates de magnésium|3|antioxydants
+350|Malates de sodium|3|acides, bases, sels
+351|Malates de potassium|3|acides, bases, sels
+352|Malates de calcium|3|acides, bases, sels
+353|Acide métatartrique|3|acides, bases, sels
+354|Tartrate de calcium|3|acides, bases, sels
+355|Acide adipique|3|acides, bases, sels
+356|Adipate de sodium|3|acides, bases, sels
+357|Adipate de potassium|3|acides, bases, sels
+363|Acide succinique|3|acides, bases, sels
+380|Citrate de triammonium|3|acides, bases, sels
+385|Ethylène-diamine-tétra-acétate de calcium disodium|0|antioxydants
+400|Acide alginique|3|épaississants
+401|Alginate de sodium|3|épaississants
+402|Alginate de potassium|3|épaississants
+403|Alginate d'ammonium|3|épaississants
+404|Alginate de calcium|3|épaississants
+405|Alginate de propylèneglycol|3|épaississants
+406|Agar-agar (gélose)|3|épaississants
+407|Carraghénane|3|épaississants
+410|Farine de graines de caroubes|0|épaississants
+412|Gomme de guar|0|épaississants
+413|Gomme adragante|0|épaississants
+414|Gomme arabique|0|épaississants
+415|Gomme de xanthane|3|épaississants
+416|Gomme Karaya|0|épaississants
+417|Gomme Tara|0|épaississants
+418|Gomme Gellane|3|épaississants
+420|Sorbitol|3|substances gustatives
+421|Mannitol|3|substances gustatives
+422|Glycerol|3|substances gustatives
+425k|Konjac|3|épaississants
+430|Gelatine|3|épaississants
+431|Stéarate de polyoxyéthylène|0|émulsifiants
+432|Monolaurate de polyoxyéthylène sorbitane|0|émulsifiants
+433|Monooléate de polyoxyéthylène sorbitane|0|émulsifiants
+434|Monopalmitate de polyoxyéthylène sorbitane|0|émulsifiants
+435|Monostéarate de polyoxythylène sorbitane|0|émulsifiants
+436|Tristéarate de polyoxyéthylène sorbitane|0|émulsifiants
+440|Pectines|3|épaississants
+442|Sels d'ammonium / acides phosphatidiques|0|émulsifiants
+444|Acétate isobutyrate de saccharose|3|émulsifiants
+445|Esters glycériques de résine de bois|3|émulsifiants
+450|Potassium / calcium et sels|3|acides, bases, sels
+451|Triphosphates|3|hosphates et polyphosphates
+452|Polyphosphates|3|hosphates et polyphosphates
+459|Bêta-cyclodextrine|3|(divers)
+460|Celluloses microcristallines|3|émulsifiants
+461|Celluloses microcristallines|3|émulsifiants
+462|Celluloses microcristallines|3|émulsifiants
+463|Celluloses microcristallines|3|émulsifiants
+464|Celluloses microcristallines|3|émulsifiants
+465|Celluloses microcristallines|3|émulsifiants
+466|Celluloses microcristallines|3|émulsifiants
+468|Carboxyméthylcellulose de sodium réticulée|3|agents de texture
+469|Carboxyméthylcellulose hydrolysée|3|agents de texture
+470|Stéarates|3|émulsifiants
+471|Mono- et diglycérides des acides gras alimentaires|3|émulsifiants
+472|Acides acétiques et tartriques|3|émulsifiants
+473|Saccharo-esters|3|émulsifiants
+474|Saccharo-glycérides 3|émulsifiants
+475|Esters polyglycériques|3|émulsifiants
+476|Polyricinoléate de polyglycérol|0|émulsifiants
+477|Esters des acides gras alimentaires|3|émulsifiants
+479|Huile de soja oxydée par chauffage|3|émulsifiants
+481|Stéaroyl - 2 lactylates de Sodium|3|émulsifiants
+482|Stéaroyl - 2 lactylates de calcium|3|émulsifiants
+483|Tartrate de stéaroyle|3|émulsifiants
+491|Monostéarate de sorbitane|3|émulsifiants
+492|Tristéarate de sorbitane|3|émulsifiants
+493|Monolaurate de sorbitane|3|émulsifiants
+494|Monooléate de sorbitane|3|émulsifiants
+495|Monopalmitate de sorbitane|3|émulsifiants
+500|Sels de l'acide carbonique|3|acides, bases, sels
+501|Sels de l'acide carbonique|3|acides, bases, sels
+502|Sels de l'acide carbonique|3|acides, bases, sels
+503|Sels de l'acide carbonique|3|acides, bases, sels
+504|Sels de l'acide carbonique|3|acides, bases, sels
+507|Acide chlorhydrique - chlorure de potassium et de calcium|3|acides, bases, sels
+508|Acide chlorhydrique - chlorure de potassium et de calcium|3|acides, bases, sels
+509|Acide chlorhydrique - chlorure de potassium et de calcium|3|acides, bases, sels
+511|Chlorure de magnésium|3|acides, bases, sels
+512|Chlorure d'étain|0|antioxydants
+513|Acide sulfurique|3|acides, bases, sels
+514|Sulfates de sodium - potassium - calcium - ammonium|3|acides, bases, sels
+515|Sulfates de sodium - potassium - calcium - ammonium|3|acides, bases, sels
+516|Sulfates de sodium - potassium - calcium - ammonium|3|acides, bases, sels
+517|Sulfates de sodium - potassium - calcium - ammonium|3|acides, bases, sels
+520|Sulfates d'aluminium - sodique - potassique et ammonique|0|acides, bases, sels
+521|Sulfates d'aluminium - sodique - potassique et ammonique|0|acides, bases, sels
+522|Sulfates d'aluminium - sodique - potassique et ammonique|0|acides, bases, sels
+523|Sulfates d'aluminium - sodique - potassique et ammonique|0|acides, bases, sels
+524|Hydroxyde/sodium - potassium - calcium - ammonium - magnésium|3|acides, bases, sels
+525|Hydroxyde/sodium - potassium - calcium - ammonium - magnésium|3|acides, bases, sels
+526|Hydroxyde/sodium - potassium - calcium - ammonium - magnésium|3|acides, bases, sels
+527|Hydroxyde/sodium - potassium - calcium - ammonium - magnésium|3|acides, bases, sels
+528|Hydroxyde/sodium - potassium - calcium - ammonium - magnésium|3|acides, bases, sels
+529|Oxyde de calcium - magnésium|3|acides, bases, sels
+530|Oxyde de calcium - magnésium|3|acides, bases, sels
+535|Ferrocyanure de sodium - potassium - calcium|3|antiagglomérants
+536|Ferrocyanure de sodium - potassium - calcium|3|antiagglomérants
+537|Ferrocyanure de sodium - potassium - calcium|3|antiagglomérants
+538|Ferrocyanure de sodium - potassium - calcium|3|antiagglomérants
+541|Phosphate d'aluminium sodique acide|0|hosphates et polyphosphates
+551|Dioxyde de silicium|3|antiagglomérants
+552|Silicate de calcium|3|antiagglomérants
+553a|(Tri)silicate de magnésium|3|antiagglomérants
+553b|Talc|0|antiagglomérants
+554|Silicate d'alumino-sodique - potassique - calcique et d'aluminium|0|antiagglomérants
+555|Silicate d'alumino-sodique - potassique - calcique et d'aluminium|0|antiagglomérants
+556|Silicate d'alumino-sodique - potassique - calcique et d'aluminium|0|antiagglomérants
+557|Silicate d'alumino-sodique - potassique - calcique et d'aluminium|0|antiagglomérants
+558|Silicate d'alumino-sodique - potassique - calcique et d'aluminium|0|antiagglomérants
+559|Silicate d'alumino-sodique - potassique - calcique et d'aluminium|0|antiagglomérants
+570|Acides gras|3|émulsifiants
+574|Acide gluconique|3|acides, bases, sels
+575|Glucono-delta-lactone - de sodium - potassium - calcium - fer|3|acides, bases, sels
+576|Glucono-delta-lactone - de sodium - potassium - calcium - fer|3|acides, bases, sels
+577|Glucono-delta-lactone - de sodium - potassium - calcium - fer|3|acides, bases, sels
+578|Glucono-delta-lactone - de sodium - potassium - calcium - fer|3|acides, bases, sels
+579|Glucono-delta-lactone - de sodium - potassium - calcium - fer|3|acides, bases, sels
+585|Lactate de fer|3|colorants
+620|Acide glutamique|0| exhausteurs de saveur
+621|Sels de l'acide glutamique (glutamates)|0| exhausteurs de saveur
+622|Sels de l'acide glutamique (glutamates)|0| exhausteurs de saveur
+623|Sels de l'acide glutamique (glutamates)|0| exhausteurs de saveur
+624|Sels de l'acide glutamique (glutamates)|0| exhausteurs de saveur
+625|Sels de l'acide glutamique (glutamates)|0| exhausteurs de saveur
+626|Acide guanylique|3| exhausteurs de saveur
+627|Sels de l'acide guanylique|3| exhausteurs de saveur
+628|Sels de l'acide guanylique|3| exhausteurs de saveur
+629|Sels de l'acide guanylique|3| exhausteurs de saveur
+630|Acide inosinique|3| exhausteurs de saveur
+631|Sels de l'acide inosinique|3| exhausteurs de saveur
+632|Sels de l'acide inosinique|3| exhausteurs de saveur
+633|Sels de l'acide inosinique|3| exhausteurs de saveur
+634|ribonucleotide calcique - disodique|3| exhausteurs de saveur
+635|ribonucleotide calcique - disodique|3| exhausteurs de saveur
+640|Glycine et son sel de sodium|3|(divers)
+900|Diméthylpolysiloxane|0|(divers)
+901|Cire d'abeille blanche et jaune|0|matières d'enrobage
+902|Cire de candelilla|3|matières d'enrobage
+903|Cire de carnauba|0|matières d'enrobage
+904|Shellac|0|matières d'enrobage
+905|Cire microcristalline|0|matières d'enrobage
+912|Esters de l'acide montanique|0|matières d'enrobage
+914|Cire de polyéthylène oxydée|3|matières d'enrobage
+920|L-cystéine|3|(divers)
+927b|Carbamide|3|(divers)
+938|Argon|3|gaz
+939|Hélium|3|gaz
+941|Azote|3|gaz
+942|Protoxyde d'azote|3|gaz
+948|Oxygène|3|gaz
+950|Acésulfame K|3|édulcorants
+951|Aspartame|0|édulcorants
+952|Cyclamates|0|édulcorants
+953|Isomalt|3|substances gustatives
+954|Saccharine|0|édulcorants
+957|Thaumatine|3|édulcorants
+959|Neohespéridine DC|3| exhausteurs de saveur
+965|Maltitol|3| exhausteurs de saveur
+967|Xylitol|3| exhausteurs de saveur
+999|Extraits de quillaia|0|(divers)
+1103|Invertase|3|(divers)
+1105|Lysozyme|0|colorants
+1200|Polydextrose|3|(divers)
+1201|Polyvinylpyrrolidone|0|(divers)
+1202|Polyvinylpolypyrrolidone|0|(divers)
+1404|Amidon oxydé|3|amidons modifiés
+1410|Phosphate d'amidon|3|amidons modifiés
+1412|Phosphate de diamidon|3|amidons modifiés
+1413|Phosphate de diamidon phosphaté|3|amidons modifiés
+1414|Phosphate de diamidon acétylé|3|amidons modifiés
+1420|Amidon acétylé|3|amidons modifiés
+1422|Adipate de diamidon acétylé|3|amidons modifiés
+1440|Amidon hydroxypropylé|3|amidons modifiés
+1442|Phosphate de diamidon hydroxypropylé|3|amidons modifiés
+1450|Octényle succinate d'amidon sodique|3|amidons modifiés
+1451|Amidon oxydé acétylé|3|amidons modifiés
+1505|Citrate de triéthyle|3|(divers)
+1518|Triacétate de glycérine (triacétine)|3|(divers)
