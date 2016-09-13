@@ -3,24 +3,28 @@
 * @Date:   25-07-2016
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 25-07-2016
+* @Last modified time: 13-09-2016
 */
 
-import { Component } from '@angular/core';
-import { NavController, Modal, Loading, Alert } from 'ionic-angular';
+import { Component }       from '@angular/core';
+import {
+  NavController,
+  Modal,
+  Loading,
+  Alert
+}                          from 'ionic-angular';
 
-import { HeaderContent }    from '../../components/header-content/header-content';
+import { HeaderContent }   from '../../components/header-content/header-content';
 
-import {Routes} from '../../providers/routes/routes';
-import {FirebaseService} from '../../providers/firebase/firebase';
+import { Routes }          from '../../providers/routes/routes';
+import { FirebaseService } from '../../providers/firebase/firebase';
 
 import {
   FORM_DIRECTIVES,
-  FormBuilder,
   Validators,
   AbstractControl,
   ControlGroup
-}                           from '@angular/common';
+}                          from '@angular/common';
 /*
   Generated class for the LoginPage page.
 
@@ -47,10 +51,9 @@ export class UserPage {
   public loginForm: any;
 
   constructor(
-    private nav: NavController,
-    private routes:Routes,
-    public authData: FirebaseService,
-    public formBuilder: FormBuilder
+    private nav     : NavController,
+    private routes  :Routes,
+    public authData : FirebaseService
   ) {
     this.nav = nav;
     if(navigator.onLine === true){
@@ -59,7 +62,6 @@ export class UserPage {
         if (user) {
           // If there's a user take him to the home page.
           this.isAuth = true
-
           this.email = this.capitalise(user.email.split('@')[0])
         } else {
           // If there's no user logged in send him to the LoginPage
@@ -71,12 +73,6 @@ export class UserPage {
       // If there's no user logged in send him to the LoginPage
       this.isAuth = false
     }
-
-    /*this.loginForm = formBuilder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required]
-    })
-    */
   }
 
   capitalise(string) {
@@ -84,6 +80,10 @@ export class UserPage {
   }
 
   loginUser(value){
+    if(!value.email && !value.password){
+      this.showError("Tous les champs sont obligatoires",false)
+      return;
+    }
     this.loading = Loading.create({
       dismissOnPageChange: true,
     });
@@ -101,6 +101,10 @@ export class UserPage {
   }
 
   goToSignup(value){
+    if(!value.email && !value.password){
+      this.showError("Tous les champs sont obligatoires",false)
+      return;
+    }
     this.loading = Loading.create({
       dismissOnPageChange: true,
     });
@@ -120,13 +124,14 @@ export class UserPage {
     this.authData.logoutUser();
   }
 
-  showError(text) {
-    setTimeout(() => {
-      this.loading.dismiss();
-    });
-
+  showError(text:string,hideLoading:boolean=true) {
+    if (hideLoading === true){
+      setTimeout(() => {
+        this.loading.dismiss();
+      });
+    }
     let prompt = Alert.create({
-      title: 'Fail',
+      title: 'Erreur',
       subTitle: text,
       buttons: ['OK']
     });
