@@ -18,7 +18,7 @@
 
 
 <ion-content>
-  <ion-item-divider >Affichage max: 20 produits <span class="clear" (click)="onClearHistory()">effecer</span></ion-item-divider>
+  <ion-item-divider >Affichage max: 20 produits <ion-badge *ngIf="historySearch.length > 0 && offlineTxt === true" item-right (click)="onClearHistory()">effecer</ion-badge></ion-item-divider>
   <div *ngIf="historySearch.length <= 0 && offlineTxt === true" padding>
     <p>
       Tu retrouvera ici les 20 derniers produits consulté,

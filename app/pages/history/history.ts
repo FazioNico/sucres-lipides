@@ -3,7 +3,7 @@
 * @Date:   24-08-2016
 * @Email:  contact@nicolasfazio.ch
 * @Last modified by:   webmaster-fazio
-* @Last modified time: 26-08-2016
+* @Last modified time: 13-09-2016
 */
 
 import {
@@ -179,7 +179,7 @@ export class HistoryPage {
   }
 
   clearHistory(){
-    console.log('clearHistory')
+    //console.log('clearHistory')
     if(this.user){
       console.log(this.user.uid)
       this.authData
@@ -225,7 +225,7 @@ export class HistoryPage {
   onClearHistory(){
     let alert = Alert.create({
       title: "Effacer l'historique",
-      message: "Veux tu effecer l'hisorique des produits consulté?",
+      message: "Veux-tu effacer l'historique des produits consultés?",
       buttons: [{
         text: 'Annuler',
         handler: () => {
@@ -233,7 +233,7 @@ export class HistoryPage {
         }
       },
       {
-        text: 'Efecer',
+        text: 'Effacer',
         handler: () => {
           this.clearHistory()
           //console.log('ok press');
