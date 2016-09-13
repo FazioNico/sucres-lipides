@@ -26,6 +26,8 @@ import { Camera }           from 'ionic-native';
 
 //import { ApiService }       from '../../providers/api-service/api-service';
 import { Store }            from '../../providers/store/store';
+import { FirebaseService }  from '../../providers/firebase/firebase';
+
 import { HeaderContent }    from '../../components/header-content/header-content';
 
 /*
@@ -42,7 +44,8 @@ import { HeaderContent }    from '../../components/header-content/header-content
     FORM_DIRECTIVES
   ],
   providers: [
-    Store
+    Store,
+    FirebaseService
   ]
 })
 export class AddPage {
@@ -62,13 +65,20 @@ export class AddPage {
     private   nav         : NavController,
     private   _st         : Store,
     private   fb          : FormBuilder,
-    private   params      : NavParams
+    private   params      : NavParams,
+    public authData         : FirebaseService
   ) {
     // if get nav params => set input barcode value
     let inputBarcode:any =  ["", Validators.minLength(4)];
     if(this.params.get('id')){
       this.barcode = this.params.get('id');
       inputBarcode = this.barcode
+    }
+    if(this._st.online === true){
+      this.authData = authData;
+    }
+    else {
+      this.authData = null;
     }
     // Set Form ControlGroup
     this.myForm = fb.group({
@@ -147,6 +157,7 @@ export class AddPage {
         //console.info('product  added now ready to add img product')
         this.productAdded = true;
         let resultPostImg = this._st.saveImg(this.file, this.barcode);
+        this.saveProductIDinFB(this.barcode)
         this.hideLoading();
       },5000)
       /** **/
@@ -160,6 +171,25 @@ export class AddPage {
       });
       this.nav.present(alert);
     }
+  }
+
+  saveProductIDinFB(barcode:string){
+    if(this._st.online === true){
+      this.authData.fireAuth.onAuthStateChanged((user) => {
+        if (user) {
+           let database = this.authData.database.ref('productAdded/' + user.uid);
+           database.once('value', function(snapshot) {
+             database.child(barcode).set({
+               nbr: 1,
+               time: new Date().getTime()
+             }).then(() => {
+               //console.log('user historySearch Creat & product added')
+             });
+           })
+        }
+      });
+    }
+
   }
 
   SerializeParams<T>(Data: T): string|number {
