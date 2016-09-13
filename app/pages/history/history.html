@@ -3,7 +3,7 @@
 @Date:   24-08-2016
 @Email:  contact@nicolasfazio.ch
 @Last modified by:   webmaster-fazio
-@Last modified time: 12-09-2016
+@Last modified time: 13-09-2016
 -->
 
 <!--
@@ -18,7 +18,7 @@
 
 
 <ion-content>
-  <ion-item-divider >Affichage max: 20 produits</ion-item-divider>
+  <ion-item-divider >Affichage max: 20 produits <span class="clear" (click)="onClearHistory()">effecer</span></ion-item-divider>
   <div *ngIf="historySearch.length <= 0 && offlineTxt === true" padding>
     <p>
       Tu retrouvera ici les 20 derniers produits consulté,

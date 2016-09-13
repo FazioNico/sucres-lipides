@@ -13,7 +13,8 @@ import {
 import {
   NavController,
   Loading,
-  Content
+  Content,
+  Alert
 }                           from 'ionic-angular';
 
 import * as _               from 'lodash';
@@ -58,6 +59,7 @@ import { SortDesc }         from '../../pipes/SortDesc';
 export class HistoryPage {
 
   isAuth:boolean = false;
+  user:any;
   historySearch:any[] = [];
   offlineTxt:boolean = true;
   loading:Loading;
@@ -86,6 +88,7 @@ export class HistoryPage {
       this.authData.fireAuth.onAuthStateChanged((user) => {
         if (user) {
           this.isAuth = true
+          this.user = user
           // load history list
           this.loading = Loading.create({
             content: "Chargement..."
@@ -175,6 +178,16 @@ export class HistoryPage {
     this.loading.dismiss();
   }
 
+  clearHistory(){
+    console.log('clearHistory')
+    if(this.user){
+      console.log(this.user.uid)
+      this.authData
+      .database.ref('historySearch/' + this.user.uid).remove()
+      .then(()=> this.historySearch = [])
+    }
+
+  }
   /** Events Methode **/
   onClickBack(){
     this.nav.pop()
@@ -207,6 +220,27 @@ export class HistoryPage {
       );
     },800)
 
+  }
+
+  onClearHistory(){
+    let alert = Alert.create({
+      title: "Effacer l'historique",
+      message: "Veux tu effecer l'hisorique des produits consulté?",
+      buttons: [{
+        text: 'Annuler',
+        handler: () => {
+          //console.log('annuler press');
+        }
+      },
+      {
+        text: 'Efecer',
+        handler: () => {
+          this.clearHistory()
+          //console.log('ok press');
+        }
+      }]
+    });
+    this.nav.present(alert);
   }
   /*** Ionic ViewEvent ***/
   ngAfterViewInit() {
