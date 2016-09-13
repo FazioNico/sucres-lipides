@@ -11,7 +11,7 @@ import { Http }                 from '@angular/http';
 import { Observable }           from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 
-import { NavController, Alert } from 'ionic-angular';
+import { NavController, Alert, Storage, LocalStorage } from 'ionic-angular';
 import * as firebase            from 'firebase';
 
 @Injectable()
@@ -30,7 +30,13 @@ export class FirebaseService {
     }
 
     loginUserFB(email: string, password: string): any {
-      return this.fireAuth.signInWithEmailAndPassword(email, password);
+      return this.fireAuth.signInWithEmailAndPassword(email, password)
+      .then((authData)=>{
+            //console.log(authData)
+            let localStorage = new Storage(LocalStorage)
+            localStorage.set('uid', authData.uid);
+            localStorage.set('refreshToken', authData.refreshToken);
+      });
     }
 
     signupUser(email: string, password: string): any {
