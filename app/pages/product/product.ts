@@ -18,6 +18,7 @@ import {
 
 import { Store }                              from '../../providers/store/store';
 import { FirebaseService }                    from '../../providers/firebase/firebase';
+import { Wikipedia }                          from "../../providers/wikipedia/wikipedia";
 //import { Routes }                             from '../../providers/routes/routes';
 
 import { HeaderContent }                      from '../../components/header-content/header-content';
@@ -58,7 +59,8 @@ import { UserPage }                           from '../user/user';
   ],
   providers: [
     Store,
-    FirebaseService
+    FirebaseService,
+    Wikipedia
   ]
 })
 export class ProductPage {
@@ -93,7 +95,8 @@ export class ProductPage {
     private _st             : Store,
     private nav             : NavController,
     private params          : NavParams,
-    public authData         : FirebaseService
+    public authData         : FirebaseService,
+    private _wiki           : Wikipedia
   ) {
       //// Get data with nav parameters
       this.getData(this.params.get('id'))
@@ -263,21 +266,30 @@ export class ProductPage {
         serving_size:       this.productData.serving_size
 
       })
-      //console.log(this.productData) 
+      //console.log(this.productData)
       //console.log(this.focusData)
       //console.log(this.additives_tags)
     }
   }
-
+  wikiQuery(query:string){
+    return this._wiki.load(query)
+  }
   /** Events Methode **/
   onClickModal(e){
     //console.log(e)
-    let alert = Alert.create({
-      title: ''+e.id+'',
-      message: '<p><b>Nom:</b> '+e.name+'</p><p><b>Type:</b> '+e.type+'</p><p class="alertTxt '+e.level+'">'+e.txtAlert+'</p>',
-      buttons: ['Ok']
-    });
-    this.nav.present(alert);
+    // query to wikipedia API to get definition
+    let resultWiki = this.wikiQuery(e.id)
+    resultWiki.then((data:any)=> {
+      console.log(data)
+      let addDesc = data.extract;
+      let alert = Alert.create({
+        title: ''+e.id+'',
+        message: '<p><b>Nom:</b> '+e.name+'</p><p><b>Type:</b> '+data.description+'</p><p><b>Catégorie:</b> '+e.type+'</p><p><b>Déscription:</b> '+addDesc+'</p><p class="alertTxt '+e.level+'">'+e.txtAlert+'</p>',
+        buttons: ['Ok']
+      });
+      this.nav.present(alert);
+    })
+
   }
   onClickToggle(e){
     let el = e.target.closest(".acc-item > h3")
