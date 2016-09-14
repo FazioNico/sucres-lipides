@@ -279,12 +279,17 @@ export class ProductPage {
     //console.log(e)
     // query to wikipedia API to get definition
     let resultWiki = this.wikiQuery(e.id)
-    resultWiki.then((data:any)=> {
-      console.log(data)
-      let addDesc = data.extract;
+    resultWiki.then((wikiData:any)=> {
+      // then open alert
       let alert = Alert.create({
-        title: ''+e.id+'',
-        message: '<p><b>Nom:</b> '+e.name+'</p><p><b>Type:</b> '+data.description+'</p><p><b>Catégorie:</b> '+e.type+'</p><p><b>Déscription:</b> '+addDesc+'</p><p class="alertTxt '+e.level+'">'+e.txtAlert+'</p>',
+        title: e.id,
+        message: `
+          <p><b>Nom:</b> ${e.name}</p>
+          <p><b>Type:</b> ${wikiData.description}</p>
+          <p><b>Catégorie:</b> ${e.type}</p>
+          <p><b>Déscription:</b> ${wikiData.extract}</p>
+          <p class="alertTxt ${e.level}">${e.txtAlert}</p>
+        `,
         buttons: ['Ok']
       });
       this.nav.present(alert);
