@@ -143,5 +143,6 @@ ionicBootstrap(MyApp, [ HTTP_PROVIDERS ],{
      ios: {
        tabbarPlacement: 'top',
      }
-   }
+   },
+   prodMode: true
 });
