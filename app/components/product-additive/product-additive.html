@@ -21,7 +21,7 @@
   <div class="acc-content">
     <div padding>
       <span *ngFor="let additive of additiveData" >
-        <ion-badge *ngIf="additive[1] === 'green'" primary [ngStyle]="{'color': '#81c784', 'border':' 1px solid #81c784'}" class="additive line-badge" data-name="{{additive[2]}}" (click)="onClickModal({id: additive[0], name: additive[2], type: additive[3], level: additive[1], txtAlert: additive[4]})">
+        <ion-badge *ngIf="additive[1] === 'green'" primary [ngStyle]="{'background': '#03A9F4', 'border':' 0px solid #03A9F4'}" class="additive line-badge" data-name="{{additive[2]}}" (click)="onClickModal({id: additive[0], name: additive[2], type: additive[3], level: additive[1], txtAlert: additive[4]})">
           {{ additive[0] }}
         </ion-badge>
         <ion-badge *ngIf="additive[1] !== 'green'" [ngStyle]="{'background': additive[1]}" class="additive line-badge" data-name="{{additive[2]}}" (click)="onClickModal({id: additive[0], name: additive[2], type: additive[3], level: additive[1], txtAlert: additive[4]})">
