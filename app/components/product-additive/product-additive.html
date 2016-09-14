@@ -3,7 +3,7 @@
 @Date:   23-07-2016
 @Email:  contact@nicolasfazio.ch
 @Last modified by:   webmaster-fazio
-@Last modified time: 31-08-2016
+@Last modified time: 14-09-2016
 -->
 
 <!--
@@ -21,7 +21,7 @@
   <div class="acc-content">
     <div padding>
       <span *ngFor="let additive of additiveData" >
-        <ion-badge *ngIf="additive[1] === 'green'" primary [ngStyle]="{'color': '#757575', 'border':'solid 1px #757575'}" class="additive line-badge" data-name="{{additive[2]}}" (click)="onClickModal({id: additive[0], name: additive[2], type: additive[3], level: additive[1], txtAlert: additive[4]})">
+        <ion-badge *ngIf="additive[1] === 'green'" primary [ngStyle]="{'color': '#81c784', 'border':' 1px solid #81c784'}" class="additive line-badge" data-name="{{additive[2]}}" (click)="onClickModal({id: additive[0], name: additive[2], type: additive[3], level: additive[1], txtAlert: additive[4]})">
           {{ additive[0] }}
         </ion-badge>
         <ion-badge *ngIf="additive[1] !== 'green'" [ngStyle]="{'background': additive[1]}" class="additive line-badge" data-name="{{additive[2]}}" (click)="onClickModal({id: additive[0], name: additive[2], type: additive[3], level: additive[1], txtAlert: additive[4]})">
