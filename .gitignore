@@ -10,8 +10,3 @@ plugins/
 Thumbs.db
 
 config.ts
-
-app/
-hooks/
-typings/
-resources/
