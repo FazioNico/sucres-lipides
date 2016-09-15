@@ -1,0 +1,53 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   24-08-2016
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 13-09-2016
+-->
+
+<!--
+  Generated template for the HistoryPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <header-content title="Produits consultés" (onBack)="onClickBack()" backEnabled={{true}}></header-content>
+</ion-header>
+
+
+<ion-content>
+  <ion-item-divider >Affichage max: 20 produits <ion-badge *ngIf="historySearch.length > 0 && offlineTxt === true" item-right (click)="onClearHistory()">effecer</ion-badge></ion-item-divider>
+  <div *ngIf="historySearch.length <= 0 && offlineTxt === true" padding>
+    <p>
+      Tu retrouvera ici les 20 derniers produits consulté,
+      <br>
+      mais n'y a actuelement pas de produits à afficher.
+    </p>
+    <p>
+      Connect toi en allant sur "Mon compte" dans le menu de droite et consulte quelques poduits pour remplire cette liste
+    </p>
+  </div>
+  <div *ngIf="offlineTxt === false" padding>
+    <p>
+      L'historique fonctionne uniquement avec une connection réseau.
+    </p>
+  </div>
+  <ion-list>
+
+    <ion-item *ngFor="let productData of historySearch | sortDesc:'_order'" (click)="onGoProduct($event,productData.id)">
+
+      <ion-thumbnail item-left>
+        <div class="img_thumb" *ngIf="productData.image_thumb_url" [style.background-image]="'url(' + productData.image_thumb_url + ')'"></div>
+        <div class="img_thumb" *ngIf="!productData.image_thumb_url" [style.background-color]="'rgba(3, 169, 244, 0.2)'"></div>
+      </ion-thumbnail>
+      <h2>{{ productData.product_name }}</h2>
+      <p *ngIf="productData.brands != productData.product_name">{{ productData.brands }}</p>
+      <p><small>Nombre de vu: {{ productData._nbrView }}</small></p>
+      <ion-icon clear item-right secondary ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+
+    </ion-item>
+
+  </ion-list>
+</ion-content>

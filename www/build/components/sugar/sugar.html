@@ -1,0 +1,10 @@
+<!--
+  Generated template for the Sugar component.
+
+  See https://angular.io/docs/ts/latest/api/core/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<div class="sugarZone" padding>
+  <div *ngFor="let sugarData of dataInput | sugar100g " class="sugar" [ngStyle]="{'width': getWidth(sugarData)}"></div>
+</div>

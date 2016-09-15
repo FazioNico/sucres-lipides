@@ -2,7 +2,7 @@
 # http://git-scm.com/docs/gitignore
 
 node_modules/
-www/build/
+# www/build/
 platforms/
 plugins/
 *.swp
@@ -10,3 +10,8 @@ plugins/
 Thumbs.db
 
 config.ts
+
+app/
+hooks/
+typings/
+resources/

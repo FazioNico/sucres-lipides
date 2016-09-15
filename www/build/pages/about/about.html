@@ -1,0 +1,99 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   17-08-2016
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 12-09-2016
+-->
+
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+    <header-content title="A propos"></header-content>
+    <div padding>
+      <ion-segment [(ngModel)]="aboutSegment" secondary>
+        <ion-segment-button value="history">
+          <span primary>
+            Histoire
+          </span>
+        </ion-segment-button>
+        <ion-segment-button value="work">
+          <span primary>
+            Fonctionnement
+          </span>
+        </ion-segment-button>
+        <ion-segment-button value="source">
+          <span primary>
+            Sources
+          </span>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+</ion-header>
+
+
+<ion-content padding>
+  <div [ngSwitch]="aboutSegment">
+    <div *ngSwitchCase="'history'">
+        <p primary>L'histoire de Sucres &amp; Lipides</p>
+        <p>
+          Salut!<br/>
+          Je m'appel Nicolas Fazio, je suis le créateur de Sucres &amp; Lipides.
+        </p>
+        <p>
+          L'idée de cette application m'est venu un jour où je cherchais à acheter une boisson fruitée à boire le matin...        </p>
+        <p>
+          J'ai alors vite remarqué que toutes ces boissons sont extrêmement sucrées et couvrent de par ce fait une très grande partie des recommandations faites par l'OMS pour adopter une alimentation saine et équilibrée.
+        </p>
+        <p>
+          C'est ainsi qu'est née l'idée de pouvoir voir de manière simple et représentative, la quantité de sucre contenu dans les aliments que nous consommons.
+        </p>
+        <p>
+          Sucres &amp; Lipides permet donc de comparer les articles entre eux et ainsi de choisir le moins sucré, simplement en scannant le code-barres d'un article.
+        </p>
+        <p>Et maintenant à vous de scanner !</p>
+    </div>
+
+    <div *ngSwitchCase="'work'">
+      <ion-slides pager>
+        <ion-slide>
+          <img src="./build/img/slide1.png" />
+        </ion-slide>
+        <ion-slide>
+          <img src="./build/img/slide2.png" />
+        </ion-slide>
+        <ion-slide padding>
+          <p>
+            Tu peux ajouter un produit dans la base de donnée si celui-ci est inconnu.
+          </p>
+        </ion-slide>
+      </ion-slides>
+
+    </div>
+
+    <div *ngSwitchCase="'source'">
+      <p primary>D'ou viennent les informations?</p>
+      <p>
+        PRODUITS:<br/>
+        Les données sur les produits et les photos proviennent de la base collaborative Open Food Fact qui répertorie plus de 90'000 produits alimentaires.
+      </p>
+      <p>
+        Les données sont disponibles sous la licence ouverte Open Database License et les photos sous la licence Creative Commons Attribution Partage à l'identique. Les marques citées sont la propriété de leurs propriétaires respectifs.
+      </p>
+      <p>
+        La base de données est constituée de manière collaborative, il n'est pas possible de garantir qu'elle soit exempte d'erreurs. La composition des produits peut également avoir changé. Si vous constatez une erreur, merci de nous la signaler afin qu'elle soit corrigée.
+      </p>
+      <br>
+      <p>
+        ADDITIFS: <br>
+        Les données concernant les additifs ont été collectées par les principales organisations de consommateurs européennes. On les retrouve dans l'ouvrage "Du poison dans votre assiette . Utilité et risques des additifs alimentaires". Ouvrage diffusé en Suisse par la Fédération romande des consommateurs (FRC).
+      </p>
+    </div>
+
+  </div>
+</ion-content>
