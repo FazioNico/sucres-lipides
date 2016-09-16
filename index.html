@@ -4,30 +4,45 @@
   <meta charset="UTF-8">
   <title>Sucres &amp; Lipides</title>
   <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <!-- Compiled and minified JavaScript -->
   <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <style>
+    html, body, main, section, section > .container, section > .container > .row {
+      height:100%;
+    }
     body {
-      background: #03A9F4;
-      color: #fff;
     }
     nav {
       background: transparent;
       box-shadow: none;
     }
-    .appTitle {
-      font-weight: 300;
+    nav .brand-logo {
+      font-size: 1.3rem;
+    }
+    .dTable {
+      display: table;
+      height: 100%;
+    }
+    .dTableCell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    *.blue {
+      background: #03A9F4 !important;
+      color: #fff !important;
     }
   </style>
 </head>
 <body>
-  <main>
-    <header>
+  <header class="blue">
+    <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper container">
-          <a href="#" class="brand-logo">Logo</a>
+          <a href="#" class="brand-logo">Sucres &amp; Lipides</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="sass.html">About</a></li>
             <li><a href="badges.html">Download</a></li>
@@ -35,26 +50,38 @@
           </ul>
         </div>
       </nav>
-    </header>
-    <div class="container">
-      <section>
-
-            <div class="row">
-              <div class="col s7">
-                <h1 class="appTitle">Sucres &amp; Lipides</h1>
-                <p>
+    </div>
+  </header>
+  <main>
+    <section class="blue">
+        <div class="container">
+          <div class="row">
+            <div class="col s7 dTable">
+              <div class="dTableCell">
+                <p class="flow-text">
                   Découvre la quantité de sucres et lipides contenus dans tes produits alimentaires favoris.
                 </p>
                 <p>
                   Support: contact@nicolasfazio.ch
                 </p>
               </div>
-              <div class="col s5">
+
+            </div>
+            <div class="col s5 dTable">
+              <div class="dTableCell">
                 <img class="responsive-img" src="./www/build/img/sucres-lipide-mokup-phone.png">
               </div>
             </div>
-      </section>
-    </div>
+          </div>
+        </div>
+    </section>
+    <section class="white">
+      <div class="container">
+        <div class="row">
+          <div class="col 12">test</div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
