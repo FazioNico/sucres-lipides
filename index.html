@@ -10,10 +10,13 @@
   <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <style>
-    html, body, main, section, section > .container, section > .container > .row {
+    html, body, main, section, section > .container, section > .container > .row:first-child {
       height:100%;
     }
     body {
+    }
+    header.menu {
+      position:absolute;
     }
     nav {
       background: transparent;
@@ -21,6 +24,14 @@
     }
     nav .brand-logo {
       font-size: 1.3rem;
+    }
+    .bg {
+      background: url(./www/build/img/bg-app.png) center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    section{
+      padding:60px 0px;
     }
     .dTable {
       display: table;
@@ -31,14 +42,30 @@
       vertical-align: middle;
     }
 
-    *.blue {
-      background: #03A9F4 !important;
+    .row{
+      margin-bottom: 0px;
+    }
+    .btn {
+      box-shadow: none !important;
+    }
+    *.text-secondary {
+      color: #FF4081;
+    }
+    section.primary, div.primary {
+      background-color: #03A9F4 !important;
       color: #fff !important;
+    }
+    p.primary, h1.primary, h2.primary, h3.primary, span.primary {
+      color: #03A9F4;
+      background-color: transparent !important;
+    }
+    h2 {
+      font-size: 1.8rem;
     }
   </style>
 </head>
 <body>
-  <header class="blue">
+  <header class="primary menu">
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper container">
@@ -53,7 +80,7 @@
     </div>
   </header>
   <main>
-    <section class="blue">
+    <section class="primary bg">
         <div class="container">
           <div class="row">
             <div class="col s7 dTable">
@@ -61,15 +88,17 @@
                 <p class="flow-text">
                   Découvre la quantité de sucres et lipides contenus dans tes produits alimentaires favoris.
                 </p>
+                <br>
                 <p>
-                  Support: contact@nicolasfazio.ch
+                  <a class="waves-effect waves-light btn-large white"><span class="text-secondary flow-text">Download App</span></a>
                 </p>
+
               </div>
 
             </div>
             <div class="col s5 dTable">
               <div class="dTableCell">
-                <img class="responsive-img" src="./www/build/img/sucres-lipide-mokup-phone.png">
+                <img alt="Sucres &amp; Lipides Application" class="responsive-img" src="./www/build/img/sucres-lipide-mokup-phone.png">
               </div>
             </div>
           </div>
@@ -78,7 +107,46 @@
     <section class="white">
       <div class="container">
         <div class="row">
-          <div class="col 12">test</div>
+          <div class="col s12">
+            <h2 class="primary center-align">L'appli</h2>
+            <p class="flow-text center-align">
+              Connaître la quantité de sucre et de graisse que tu consomme au quotidien.
+            </p>
+            <div class="col s6">
+              <p>
+                De nombreux produits alimentaires et boissons de tous les jours généralement perçus comme «sain» sont en fait riches en sucre ou en graisse.
+              </p>
+              <p>
+                L'industrie agro alimentaire se donne beaucoup de mal pour nous faire croire que tout ce que nous consommons est bon pour notre santé,
+                mais en réalité il n'en est rien!
+              </p>
+              <p>
+                La nourriture industrielle est saturée de sucre et graisse ajoutée dans le seul but de rendre plus gustative les préparations que ces firmes nous vendent.
+              </p>
+            </div>
+            <div class="col s6">
+              <p>
+                Le but de cette application est de t'encourager à faire le choix alimentaire plus sains en  t'aidant à découvrir le sucre et les graisse «caché» dans les produits alimentaires et de boissons emballés que tu consomme.
+              </p>
+              <p>
+                Sucres &amp; Lipides convertit les sucres totaux dans les produits alimentaires et des boissons, et affiche graphiquement le total contennu sous forme de « carré de sucre ».
+              </p>
+              <p>
+               Les graisses sont quant à elles affichées dans une petite jauge qui te permet de mieux visualiser ta consommation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <p>
+              Support: contact@nicolasfazio.ch
+            </p>
+          </div>
         </div>
       </div>
     </section>
