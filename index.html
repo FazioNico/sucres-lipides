@@ -6,6 +6,7 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified JavaScript -->
   <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -48,6 +49,18 @@
     .btn {
       box-shadow: none !important;
     }
+    #download {
+      padding: 80px 0px 40px 0px;
+    }
+    .ios-icon {
+      float: left;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+    .footer {
+      padding:10px 0px;
+    }
+
     *.text-secondary {
       color: #FF4081;
     }
@@ -107,47 +120,60 @@
     <section class="white">
       <div class="container">
         <div class="row">
-          <div class="col s12">
-            <h2 class="primary center-align">L'appli</h2>
-            <p class="flow-text center-align">
-              Connaître la quantité de sucre et de graisse que tu consomme au quotidien.
-            </p>
-            <div class="col s6">
-              <p>
-                De nombreux produits alimentaires et boissons de tous les jours généralement perçus comme «sain» sont en fait riches en sucre ou en graisse.
+          <div class="col s12 dTable">
+            <div class="dTableCell">
+              <h2 class="primary center-align">L'appli</h2>
+              <p class="flow-text center-align">
+                Connaître la quantité de sucre et de graisse que tu consomme au quotidien.
               </p>
-              <p>
-                L'industrie agro alimentaire se donne beaucoup de mal pour nous faire croire que tout ce que nous consommons est bon pour notre santé,
-                mais en réalité il n'en est rien!
-              </p>
-              <p>
-                La nourriture industrielle est saturée de sucre et graisse ajoutée dans le seul but de rendre plus gustative les préparations que ces firmes nous vendent.
-              </p>
+              <div class="col s6">
+                <p>
+                  De nombreux produits alimentaires et boissons de tous les jours généralement perçus comme «sain» sont en fait riches en sucre ou en graisse.
+                </p>
+                <p>
+                  L'industrie agro alimentaire se donne beaucoup de mal pour nous faire croire que tout ce que nous consommons est bon pour notre santé,
+                  mais en réalité il n'en est rien!
+                </p>
+                <p>
+                  La nourriture industrielle est saturée de sucre et graisse ajoutée dans le seul but de rendre plus gustative les préparations que ces firmes nous vendent.
+                </p>
+              </div>
+              <div class="col s6">
+                <p>
+                  Le but de cette application est de t'encourager à faire le choix alimentaire plus sains en  t'aidant à découvrir le sucre et les graisse «caché» dans les produits alimentaires et de boissons emballés que tu consomme.
+                </p>
+                <p>
+                  Sucres &amp; Lipides convertit les sucres totaux dans les produits alimentaires et des boissons, et affiche graphiquement le total contennu sous forme de « carré de sucre ».
+                </p>
+                <p>
+                 Les graisses sont quant à elles affichées dans une petite jauge qui te permet de mieux visualiser ta consommation.
+                </p>
+              </div>
             </div>
-            <div class="col s6">
-              <p>
-                Le but de cette application est de t'encourager à faire le choix alimentaire plus sains en  t'aidant à découvrir le sucre et les graisse «caché» dans les produits alimentaires et de boissons emballés que tu consomme.
-              </p>
-              <p>
-                Sucres &amp; Lipides convertit les sucres totaux dans les produits alimentaires et des boissons, et affiche graphiquement le total contennu sous forme de « carré de sucre ».
-              </p>
-              <p>
-               Les graisses sont quant à elles affichées dans une petite jauge qui te permet de mieux visualiser ta consommation.
-              </p>
+
+
+          </div>
+        </div>
+      </div>
+      <div id="download" class="grey lighten-4">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 center-align">
+              <span class="waves-effect waves-light btn-large disabled">
+                <img class="ios-icon" src="http://www.clker.com/cliparts/i/s/H/f/4/T/apple-logo-white-hi.png" width="20px" alt=""> download app from Apple Store
+              </span>
+              <!--<span class="waves-effect waves-light btn-large disabled">
+                <i class="material-icons left">android</i>download app from Play Store
+              </span>-->
+            </div>
+            <div class="col s12 center-align">
+              <p class="grey-text darken-1">Disponible d'ici fin septembre 2016.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col s12 center-align">
-            <p>
-              Support: contact@nicolasfazio.ch
-            </p>
-          </div>
-        </div>
+      <div class="footer center-align grey lighten-2">
+        <p>Support: contact[at]nicolasfazio.ch</p>
       </div>
     </section>
   </main>
