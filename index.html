@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Sucres &amp; Lipides</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
@@ -11,9 +12,12 @@
   <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <style>
-    html, body, main, section, section > .container, section > .container > .row:first-child {
-      height:100%;
+    @media (min-width: 600px) {
+      html, body, main, section, section > .container, section > .container > .row:first-child {
+        height:100%;
+      }
     }
+
     body {
     }
     header.menu {
@@ -22,6 +26,14 @@
     nav {
       background: transparent;
       box-shadow: none;
+      transition: all 0.3s ease-in-out;
+    }
+    nav.scroll{
+      background: white;
+      box-shadow: 0px 0px 10px #333;;
+    }
+    nav.scroll ul a, nav.scroll .brand-logo {
+      color: #03A9F4;
     }
     nav .brand-logo {
       font-size: 1.3rem;
@@ -49,8 +61,9 @@
     .btn {
       box-shadow: none !important;
     }
-    #download {
-      padding: 80px 0px 40px 0px;
+    #app-icon {
+        border-radius: 30px;
+        max-height: 200px;
     }
     .ios-icon {
       float: left;
@@ -78,15 +91,15 @@
   </style>
 </head>
 <body>
-  <header class="primary menu">
+  <header id="index" class="menu">
     <div class="navbar-fixed">
       <nav>
         <div class="nav-wrapper container">
-          <a href="#" class="brand-logo">Sucres &amp; Lipides</a>
+          <a href="#index" class="brand-logo">Sucres &amp; Lipides</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">About</a></li>
-            <li><a href="badges.html">Download</a></li>
-            <li><a href="collapsible.html">Contact</a></li>
+            <li><a href="#app">L'appli</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -96,20 +109,20 @@
     <section class="primary bg">
         <div class="container">
           <div class="row">
-            <div class="col s7 dTable">
+            <div class="col m7 dTable">
               <div class="dTableCell">
                 <p class="flow-text">
                   Découvre la quantité de sucres et lipides contenus dans tes produits alimentaires favoris.
                 </p>
                 <br>
                 <p>
-                  <a class="waves-effect waves-light btn-large white"><span class="text-secondary flow-text">Download App</span></a>
+                  <a href="#download" class="btn-href waves-effect waves-light btn-large white text-secondary flow-text">Download App</a>
                 </p>
 
               </div>
 
             </div>
-            <div class="col s5 dTable">
+            <div class="col m5 dTable">
               <div class="dTableCell">
                 <img alt="Sucres &amp; Lipides Application" class="responsive-img" src="./www/build/img/sucres-lipide-mokup-phone.png">
               </div>
@@ -117,7 +130,29 @@
           </div>
         </div>
     </section>
-    <section class="white">
+    <section id="download" class="grey lighten-4">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 dTable center-align">
+            <div class="dTableCell">
+              <img id="app-icon" src="./www/build/img/icon.png" alt="application icon">
+              <p class="flow-text primary">Télécharger Sucres &amp; Lipides</p>
+              <span class="waves-effect waves-light btn-large disabled">
+                <img class="ios-icon" src="http://www.clker.com/cliparts/i/s/H/f/4/T/apple-logo-white-hi.png" width="20px" alt=""> download app from Apple Store
+              </span>
+              <!--<span class="waves-effect waves-light btn-large disabled">
+                <i class="material-icons left">android</i>download app from Play Store
+              </span>-->
+              <div class="col s12 center-align">
+                <p class="grey-text darken-1">Disponible d'ici fin septembre 2016.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section id="app" class="white">
       <div class="container">
         <div class="row">
           <div class="col s12 dTable">
@@ -126,7 +161,7 @@
               <p class="flow-text center-align">
                 Connaître la quantité de sucre et de graisse que tu consomme au quotidien.
               </p>
-              <div class="col s6">
+              <div class="col m6">
                 <p>
                   De nombreux produits alimentaires et boissons de tous les jours généralement perçus comme «sain» sont en fait riches en sucre ou en graisse.
                 </p>
@@ -138,7 +173,7 @@
                   La nourriture industrielle est saturée de sucre et graisse ajoutée dans le seul but de rendre plus gustative les préparations que ces firmes nous vendent.
                 </p>
               </div>
-              <div class="col s6">
+              <div class="col m6">
                 <p>
                   Le but de cette application est de t'encourager à faire le choix alimentaire plus sains en  t'aidant à découvrir le sucre et les graisse «caché» dans les produits alimentaires et de boissons emballés que tu consomme.
                 </p>
@@ -155,27 +190,33 @@
           </div>
         </div>
       </div>
-      <div id="download" class="grey lighten-4">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 center-align">
-              <span class="waves-effect waves-light btn-large disabled">
-                <img class="ios-icon" src="http://www.clker.com/cliparts/i/s/H/f/4/T/apple-logo-white-hi.png" width="20px" alt=""> download app from Apple Store
-              </span>
-              <!--<span class="waves-effect waves-light btn-large disabled">
-                <i class="material-icons left">android</i>download app from Play Store
-              </span>-->
-            </div>
-            <div class="col s12 center-align">
-              <p class="grey-text darken-1">Disponible d'ici fin septembre 2016.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer center-align grey lighten-2">
+
+      <div id="contact" class="footer center-align grey lighten-2">
         <p>Support: contact[at]nicolasfazio.ch</p>
       </div>
     </section>
   </main>
+  <script>
+    // scroll header effect
+    $(window).scroll(function(){
+      var $this = $(this)[0].pageYOffset;
+      if($this > 68){
+        $($('nav')[0]).addClass('scroll')
+      }
+
+      if($this < 68){
+        $($('nav')[0]).removeClass('scroll')
+      }
+    })
+    // Click menu navigation
+    $('.nav-wrapper,.btn-href').on('click', function(e){
+      e.preventDefault()
+      $this = e.target.hash;
+      $('body').animate({
+            scrollTop:$($this)[0].offsetTop
+          }, '200'
+      );
+    })
+  </script>
 </body>
 </html>
