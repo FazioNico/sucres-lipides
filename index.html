@@ -17,7 +17,10 @@
         height:100%;
       }
     }
-
+    section#app {
+      height: auto;
+      padding-bottom: 0px;
+    }
     body {
     }
     header.menu {
@@ -77,6 +80,7 @@
     *.text-secondary {
       color: #FF4081;
     }
+    span.btn.primary,
     section.primary, div.primary {
       background-color: #03A9F4 !important;
       color: #fff !important;
@@ -87,6 +91,12 @@
     }
     h2 {
       font-size: 1.8rem;
+    }
+    .mkp {
+      padding:60px 0px !important;
+    }
+    img.mkp-app {
+      max-height:500px;
     }
   </style>
 </head>
@@ -137,14 +147,16 @@
             <div class="dTableCell">
               <img id="app-icon" src="./www/build/img/icon.png" alt="application icon">
               <p class="flow-text primary">Télécharger Sucres &amp; Lipides</p>
+              <a href="https://itunes.apple.com/fr/app/sucres-et-lipides/id1155194660">
+                <span class="waves-effect primary btn waves-light btn-large ">
+                  <img class="ios-icon" src="http://www.clker.com/cliparts/i/s/H/f/4/T/apple-logo-white-hi.png" width="20px" alt=""> download app from Apple Store
+                </span>
+              </a>
               <span class="waves-effect waves-light btn-large disabled">
-                <img class="ios-icon" src="http://www.clker.com/cliparts/i/s/H/f/4/T/apple-logo-white-hi.png" width="20px" alt=""> download app from Apple Store
-              </span>
-              <!--<span class="waves-effect waves-light btn-large disabled">
                 <i class="material-icons left">android</i>download app from Play Store
-              </span>-->
+              </span>
               <div class="col s12 center-align">
-                <p class="grey-text darken-1">Disponible d'ici fin septembre 2016.</p>
+                <p class="grey-text darken-1">Disponible sur Play Store d'ici fin de l'automne 2016.</p>
               </div>
             </div>
           </div>
@@ -183,6 +195,11 @@
                 <p>
                  Les graisses sont quant à elles affichées dans une petite jauge qui te permet de mieux visualiser ta consommation.
                 </p>
+              </div>
+              <div class="col m12 mkp center-align">
+                <img class="mkp-app" src="./www/build/img/sucres-lipides-screen-app-web-search.png" alt="">
+                <img class="mkp-app" src="./www/build/img/sucres-lipides-screen-app-web-product.png" alt="">
+                <img class="mkp-app" src="./www/build/img/sucres-lipides-screen-app-web-product-slide.png" alt="">
               </div>
             </div>
 
