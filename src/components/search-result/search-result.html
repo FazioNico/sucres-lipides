@@ -1,0 +1,33 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   06-07-2016
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 04-02-2017
+-->
+
+<!--
+  Generated template for the SearchResult component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-list>
+
+  <ion-item *ngFor="let productData of dataInput" (click)="onGoProduct($event,productData)">
+
+    <ion-thumbnail item-left>
+      <div class="img_thumb" *ngIf="productData.image_thumb_url" [style.background-image]="'url(' + productData.image_thumb_url + ')'"></div>
+      <div class="img_thumb" *ngIf="!productData.image_thumb_url" [style.background-color]="'rgba(3, 169, 244, 0.2)'"></div>
+    </ion-thumbnail>
+
+    <h2>{{ productData.product_name }}</h2>
+
+    <p *ngIf="productData.brands != productData.product_name">{{ productData.brands }}</p>
+
+    <ion-icon clear item-right color="secondary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
+
+  </ion-item>
+
+</ion-list>

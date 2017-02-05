@@ -1,0 +1,29 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   02-01-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 02-02-2017
+
+page-history {
+
+   .content-md {
+     background: none;
+   }
+   .toolbar-background-md {
+     background: none;
+   }
+   .toolbar-title-md {
+     color: color($colors, blanc);
+   }
+   ion-header.header.header-md {
+    background: color($colors, primary);
+   }
+
+  .img_thumb {
+    background-size: contain;
+    background-position: center center;
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+  }
+}

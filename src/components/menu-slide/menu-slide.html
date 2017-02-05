@@ -1,0 +1,44 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   02-01-2017
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 04-02-2017
+-->
+
+<!--
+  Generated template for the MenuSlide component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-menu [content]="contentInit" side="right">
+
+  <ion-toolbar color="primary">
+    <figure text-center>
+      <img [ngStyle]="{'max-height': '150px'}" src="./assets/icon/icon.png" />
+      <ion-title margin-bottom>Sucres &amp; Lipides</ion-title>
+    </figure>
+
+  </ion-toolbar>
+
+  <ion-list>
+    <button ion-item (click)="eventClick('ScanPage')">
+      <ion-icon padding-right name="barcode" ion-text color="primary"></ion-icon> Scanner un produit
+    </button>
+    <button ion-item (click)="eventClick('SearchPage')">
+      <ion-icon padding-right name="search" ion-text color="primary"></ion-icon> Faire une recherche
+    </button>
+    <button ion-item (click)="eventClick('HistoryPage')">
+      <ion-icon padding-right name="time" ion-text color="primary"></ion-icon> Produits consultés
+    </button>
+    <button ion-item (click)="eventClick('UserPage')">
+      <ion-icon padding-right name="person" ion-text color="primary"></ion-icon> Mon profil
+    </button>
+    <button ion-item (click)="eventClick('AboutPage')">
+      <ion-icon padding-right name="information-circle" ion-text color="primary"></ion-icon> A propos
+    </button>
+  </ion-list>
+
+</ion-menu>

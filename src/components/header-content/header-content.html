@@ -1,0 +1,32 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   23-07-2017
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 02-02-2017
+-->
+
+<!--
+  Generated template for the HeaderContent component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<ion-toolbar>
+
+  <ion-buttons left *ngIf="showBack">
+    <button ion-button icon-only (click)="onClickBack()" color="blanc">
+      <ion-icon name="arrow-back"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-title [class.opacity-content]="isClassOpacity" ><span>{{title}}</span></ion-title>
+
+  <ion-buttons right>
+    <button ion-button icon-only menuToggle color="blanc">
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+  </ion-buttons>
+
+</ion-toolbar>

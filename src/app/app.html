@@ -1,0 +1,11 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   01-02-2017
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 02-02-2017
+-->
+
+<menu-slide [content]="appcontent" [btnUserAuth]="isAuth"  (clickMenu)="onEventMenuClick($event)" ></menu-slide>
+<ion-nav #appcontent [root]="rootPage" swipeBackEnabled="false"></ion-nav>
+<scan-plug></scan-plug>
