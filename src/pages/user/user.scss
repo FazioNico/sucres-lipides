@@ -1,0 +1,39 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   02-01-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 02-02-2017
+
+page-user {
+  .content-md {
+    background: none;
+  }
+  .toolbar-background-md {
+    background: none;
+  }
+  .toolbar-title-md {
+    color: color($colors, blanc);
+  }
+  ion-header.header.header-md {
+   background: color($colors, primary);
+  }
+  
+  .login_list {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .login_error {
+    color: color($colors, danger);
+    text-align: center;
+  }
+  .table {
+      display: table;
+      height: 100%;
+      width:100%;
+  }
+  .table-cell {
+      display: table-cell;
+      vertical-align: middle;
+  }
+}

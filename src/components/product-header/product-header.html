@@ -1,0 +1,32 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   23-07-2016
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 04-02-2017
+-->
+
+<!--
+  Generated template for the ProductHeader component.
+  See https://angular.io/docs/ts/latest/api/core/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<div class="product-header">
+  <div class="product-img" [style.background-image]="'url(' + productDataHeaderInput.image_thumb_url + ')'">
+  </div>
+  <div *ngIf="productDataHeaderInput.product_name " class="transition_anim_5ms">
+    <h1 padding ion-text color="primary">
+      <span class="productTitle">
+          {{ productDataHeaderInput.product_name  }}
+        <br />
+        <small *ngIf="productDataHeaderInput.quantity ">
+          {{ productDataHeaderInput.quantity }}
+        </small>      
+      </span>
+
+    </h1>
+
+  </div>
+
+</div>

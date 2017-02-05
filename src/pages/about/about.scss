@@ -1,0 +1,27 @@
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   02-01-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 02-02-2017
+
+page-about {
+  .content-md {
+    background: color($colors, grisClaire);
+  }
+  .toolbar-background-md {
+    background: none;
+  }
+  .toolbar-title-md {
+    color: color($colors, blanc);
+  }
+  .toolbar-md {
+   background: color($colors, primary);
+  }
+
+  .segment-button.segment-activated span {
+    color: color($colors, secondary)
+  }
+  .blanc {
+    background: color($colors, blanc);
+  }
+}

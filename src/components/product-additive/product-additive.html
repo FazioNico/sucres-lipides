@@ -1,0 +1,32 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   23-07-2016
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 08-01-2017
+-->
+
+<!--
+  Generated template for the ProductAdditive component.
+  See https://angular.io/docs/ts/latest/api/core/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<div class="acc-item">
+  <h3 (click)="onClickToggle($event)" padding class="acc-title">
+    Additifs ({{total}})
+    <span><ion-icon name="ios-add"></ion-icon></span>
+  </h3>
+  <div class="acc-content">
+    <div padding>
+      <span *ngFor="let additive of additiveData" >
+        <ion-badge *ngIf="additive[1] === 'green'"  [ngStyle]="{'background': '#03A9F4', 'border':' 0px solid #03A9F4'}" class="additive line-badge" (click)="onClickModal({id: additive[0], name: additive[2], type: additive[3], level: additive[1], txtAlert: additive[4]})">
+          {{ additive[0] }}
+        </ion-badge>
+        <ion-badge *ngIf="additive[1] !== 'green'" [ngStyle]="{'background': additive[1]}" class="additive line-badge" (click)="onClickModal({id: additive[0], name: additive[2], type: additive[3], level: additive[1], txtAlert: additive[4]})">
+          {{ additive[0] }}
+        </ion-badge>
+      </span>
+    </div>
+  </div>
+</div>

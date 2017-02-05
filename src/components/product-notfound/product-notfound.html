@@ -1,0 +1,32 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   02-01-2017
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 04-02-2017
+-->
+
+<!--
+  Generated template for the ProductNotfound component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<div padding class="product-notfound-header" text-center>
+    <p>Code Bar</p>
+    <h1 blanc>{{productBarCodeInput}}</h1>
+</div>
+<div padding text-center>
+    <h2 ion-text color="primary">Article inconnu</h2>
+    <p>Ce produit n'a pas été trouvé.</p>
+    <br/>
+
+    <p>
+      <button ion-button  (click)="onClickAdd()" class="btn-block-50">Ajouter cet article</button>
+    </p>
+
+    <p>
+      <button ion-button  outline (click)="onClickBack()" class="btn-block-50">Nouvelle recherche</button>
+    </p>
+</div>

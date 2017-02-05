@@ -1,0 +1,89 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   06-07-2016
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 02-02-2017
+-->
+
+<!--
+  Generated template for the ProductFocus component.
+  See https://angular.io/docs/ts/latest/api/core/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+<div *ngIf="productFocusInput">
+
+  <div>
+    <ion-segment [(ngModel)]="focusTab" (ionChange)="onSegmentChanged($event)" color="secondary">
+      <ion-segment-button value="sugar">
+        <span ion-text color="primary">
+          Sucres
+        </span>
+      </ion-segment-button>
+      <ion-segment-button value="fat">
+        <span ion-text color="primary">
+          Lipides
+        </span>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="focusTab" [ngSwitch]="focusTab">
+    <div *ngSwitchCase="'sugar'">
+      <p  ion-text color="blanc" text-center>Recommandation OMS:<br /> env.90gr / total par jour</p>
+      <ion-slides  #mySliderSugar (ionSlideDidChange)="onSlideChanged()" pager>
+        <ion-slide *ngIf="productFocusInput[0].sugar_portion > 0">
+          <sugar [dataInput]="productFocusInput[0].sugar_portion">{{ productFocusInput[0].sugar_portion }}gr / portion</sugar>
+          <h3 ion-text color="blanc" text-center>
+              <span >
+                {{ productFocusInput[0].sugar_portion }}gr  <br/>
+                <small>
+                  par portion de
+                  {{ productFocusInput[0].serving_size }}
+                </small>
+              </span>
+          </h3>
+        </ion-slide>
+        <ion-slide *ngIf="sugar_100g > 0">
+          <sugar *ngIf="!productFocusInput[0].sugars_100" [dataInput]="productFocusInput[0].carbohydrates_100">{{ productFocusInput[0].carbohydrates_100 }}gr / 100gr</sugar>
+          <sugar *ngIf="productFocusInput[0].sugars_100" [dataInput]="productFocusInput[0].sugars_100">{{ productFocusInput[0].sugars_100 }}gr / 100gr</sugar>
+          <h3 ion-text color="blanc" text-center>
+              <span *ngIf="sugar_100g">
+                {{ sugar_100g }}gr  <br/>
+                <small>pour 100gr</small>
+              </span>
+          </h3>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div *ngSwitchCase="'fat'">
+      <p  ion-text color="blanc" text-center>Recommandation OMS:<br /> env.70gr / total par jour</p>
+      <ion-slides #mySliderFat (ionSlideDidChange)="onSlideChanged()" pager>
+        <ion-slide *ngIf="productFocusInput[0].fat_portion">
+          <fat *ngIf="productFocusInput[0].fat_portion" [dataInput]="fat_portion"></fat>
+          <h3 ion-text color="blanc" text-center>
+              <span >
+                {{ productFocusInput[0].fat_portion }}gr <br/>
+                <small>
+                  par portion de
+                  {{ productFocusInput[0].serving_size }}
+                </small>
+              </span>
+          </h3>
+        </ion-slide>
+        <ion-slide>
+          <fat *ngIf="productFocusInput[0].fat_100" [dataInput]="fat_100g"></fat>
+          <h3 ion-text color="blanc" text-center>
+            <span *ngIf="productFocusInput[0].fat_100">
+              {{ productFocusInput[0].fat_100 }}gr
+              <br/>
+              <small>pour 100gr</small>
+            </span>
+          </h3>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+</div>
