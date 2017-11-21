@@ -3,7 +3,7 @@
 * @Date:   27-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 13-11-2017
+ * @Last modified time: 21-11-2017
 */
 
 import { Injectable, Inject } from '@angular/core';
@@ -13,7 +13,6 @@ import { Observable } from 'rxjs/Observable';
 import { EnvVariables } from '../../app/environment/environment.token';
 import { IEnvironment } from "../../app/environment/env-model";
 
-import { deprecate } from "../../decorators";
 
 const STORAGE_ITEM:string = 'authTokenTest';
 
@@ -38,18 +37,21 @@ export abstract class HttpService {
   }
 
   protected get():Observable<any>{
-    this.checkStorage();
-    let token:string|null = localStorage.getItem(STORAGE_ITEM)
-    this.storage = (token)?JSON.parse(token):'';
+    //this.checkStorage();
+    // let token:string|null = localStorage.getItem(STORAGE_ITEM)
+    // this.storage = (token)?JSON.parse(token):'';
 
     // Define Heders request
     // new Headers({'cache-control': 'no-cache','x-access-token': this.storage})
-    let headers:HttpHeaders = new HttpHeaders()
-        .set('cache-control','no-cache')
-        .set('x-access-token',this.storage)
-    let options:any = { headers: headers }
+    //let headers:HttpHeaders = new HttpHeaders()
+        //.set("Content-Type", "application/json")
+        //.set("Access-Control-Allow-Origin", "*")
+        //.set('cache-control','no-cache')
+        //.set('x-access-token',this.storage)
+    //let options:any = { headers: headers }
     // post request
-    return this.http.get(`${this.apiEndPoint}${this.path}`, options)
+    console.log(this.path)
+    return this.http.get(`${this.path}`)
   }
 
   protected post(body:any):Observable<any>{
@@ -124,13 +126,5 @@ export abstract class HttpService {
     }
   }
 
-  /* Methode to formate data output */
-  @deprecate(`
-    Now using Angular 5 with HttpClientModule.
-    See Angular official doc for more infos:  https://angular.io/guide/http`)
-  private extractData(res: any):any {
-    let body = res.json();
-    //return body.data || { };
-    return body || {};
-  }
+
 }

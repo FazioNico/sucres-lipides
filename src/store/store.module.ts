@@ -3,7 +3,7 @@
 * @Date:   15-04-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 13-11-2017
+ * @Last modified time: 20-11-2017
 */
 
 import { NgModule, ModuleWithProviders } from '@angular/core';
@@ -22,11 +22,11 @@ import { ErrorEffects } from '../store/effects/errorEffects';
 import { AlertService } from "../providers/alert-service/alert-service";
 
 // (Optional): import auth-store.service to enable Login on rootPage
-import { AuthStoreService } from '../pages/login/store/auth-store.service';
+//import { AuthStoreService } from '../pages/login/store/auth-store.service';
 
 const providers:Array<any> =  [
     AlertService,
-    AuthStoreService
+    //AuthStoreService
 ];
 const effects:Array<any> = [
     ErrorEffects

@@ -1,14 +1,21 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content text-center padding>
+  <div class="table">
+    <div class="table-cell">
+      <h1 class="app-title" ion-text color='blanc'>Sucres &amp; Lipides</h1>
+      <p ion-text color='blanc'>
+        Découvre la quantité de sucres et lipides contenus dans tes produits alimentaires favoris.
+      </p>
+      <br>
+      <div>
+        <p>
+          <button ion-button ion-text color="blanc" (click)="goScan()" large class="btn-block-50 text-secondary"><ion-icon ion-text margin-right color="secondary" name="barcode"></ion-icon> <span ion-text color="secondary">Scan</span></button>
+        </p>
+        <p>
+          <button ion-button ion-text color="blanc" (click)="goSearch()" large class="btn-block-50 text-secondary"><ion-icon ion-text margin-right color="secondary" name="search"></ion-icon> <span ion-text color="secondary">Recherche</span></button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- <scan-plug></scan-plug> -->
 </ion-content>

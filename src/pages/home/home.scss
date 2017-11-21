@@ -1,3 +1,35 @@
-page-home {
+// @Author: Nicolas Fazio <webmaster-fazio>
+// @Date:   15-11-2017
+// @Email:  contact@nicolasfazio.ch
+// @Last modified by:   webmaster-fazio
+// @Last modified time: 20-11-2017
 
+page-home {
+  background: url(../assets/imgs/bg-app.png) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #03A9F4;
+
+  .content-md {
+    background: none;
+  }
+  * {
+    font-weight: 400;
+  }
+  .btn-block-60 {
+      min-width: 60%;
+  }
+  .table {
+      display: table;
+      height: 100%;
+      width:100%;
+  }
+  .table-cell {
+      display: table-cell;
+      vertical-align: middle;
+  }
+  h1.app-title {
+    font-size: 3.5rem;
+    font-weight: 100;
+  }
 }

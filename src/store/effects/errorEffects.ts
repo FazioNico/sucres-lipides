@@ -3,7 +3,7 @@
 * @Date:   14-04-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 13-11-2017
+ * @Last modified time: 20-11-2017
 */
 
 import { Injectable } from "@angular/core";
@@ -12,8 +12,8 @@ import { Observable } from 'rxjs/Observable';
 import { Effect, Actions, toPayload } from "@ngrx/effects";
 
 import * as Err from '../actions/err.actions';
-import * as Auth from '../../pages/login/store/auth.actions';
-import * as Items from '../../pages/items/store/items.actions';
+// import * as Auth from '../../pages/login/store/auth.actions';
+// import * as Items from '../../pages/items/store/items.actions';
 import { AlertService } from "../../providers/alert-service/alert-service";
 
 @Injectable()
@@ -25,13 +25,13 @@ export class ErrorEffects {
   ) {
   }
 
-  @Effect() handleErrorAction$ = this.action$
-    .ofType(
-      Auth.AuthActions.ERROR,
-      Items.ItemsActions.ERROR
-    )
-    .map(toPayload)
-    .switchMap(err => Observable.of(new Err.ErrorDisplayAction(err)))
+  // @Effect() handleErrorAction$ = this.action$
+  //   .ofType(
+  //     Auth.AuthActions.ERROR,
+  //     Items.ItemsActions.ERROR
+  //   )
+  //   .map(toPayload)
+  //   .switchMap(err => Observable.of(new Err.ErrorDisplayAction(err)))
 
 
   @Effect() displayErrorAction$ = this.action$
