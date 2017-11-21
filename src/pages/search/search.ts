@@ -76,7 +76,10 @@ export class SearchPage implements OnInit {
 
   onGoProduct(event,product){
     console.log(product)
-    this.navCtrl.push('ProductDetailPage', {data:product})
+    this.navCtrl.push('ProductDetailPage', {
+      id:product.id,
+      data:product
+    })
   }
   /**
    * Core methode

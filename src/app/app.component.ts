@@ -59,5 +59,6 @@ export class MyApp implements OnInit {
   dismissLoader():void{
     if(!this.loadingSpinner) return;
     this.loadingSpinner.dismiss();
+    this.loadingSpinner = null;
   }
 }
