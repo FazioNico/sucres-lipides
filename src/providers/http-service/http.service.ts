@@ -3,7 +3,7 @@
 * @Date:   27-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 23-11-2017
+ * @Last modified time: 27-11-2017
 */
 
 import { Injectable, Inject } from '@angular/core';
@@ -38,18 +38,8 @@ export abstract class HttpService {
   }
 
   protected get():Observable<any>{
-    //this.checkStorage();
-    // let token:string|null = localStorage.getItem(STORAGE_ITEM)
-    // this.storage = (token)?JSON.parse(token):'';
-
-    // Define Heders request
-    // new Headers({'cache-control': 'no-cache','x-access-token': this.storage})
-    //let headers:HttpHeaders = new HttpHeaders()
-        //.set("Content-Type", "application/json")
-        //.set("Access-Control-Allow-Origin", "*")
-        //.set('cache-control','no-cache')
-        //.set('x-access-token',this.storage)
-    //let options:any = { headers: headers }
+    // this.checkStorage(); // disabled
+    // let options = this.getHeaders() // disabled
     // post request
     console.log(this.path)
     return this.http.get(`${this.path}`)
@@ -57,42 +47,21 @@ export abstract class HttpService {
 
   protected post(body:any):Observable<any>{
     this.checkStorage();
-    let token:string|null = localStorage.getItem(STORAGE_ITEM)
-    this.storage = (token)?JSON.parse(token):'';
-    let headers:HttpHeaders = new HttpHeaders()
-      headers
-        .set('cache-control','no-cache')
-        .set('x-access-token',this.storage)
-    if(this.storage){
-
-    }
-    let options:any = { headers: headers };
+    let options:any = this.getHeaders();
     return this.http.post(`${this.apiEndPoint}${this.path}`, body, options)
   }
 
   protected put(body:any):Observable<any>{
     this.checkStorage();
-    let token:string|null = localStorage.getItem(STORAGE_ITEM)
-    this.storage = (token)?JSON.parse(token):'';
-
+    let options:any = this.getHeaders();
     let url:string = `${this.apiEndPoint}${this.path}/${body._id}`; //see mdn.io/templateliterals
-    let headers:HttpHeaders = new HttpHeaders()
-        .set('cache-control','no-cache')
-        .set('x-access-token',this.storage)
-    let options:any = { headers: headers };
     return this.http.put(url, JSON.stringify(body), options)
   }
 
   protected delete(_id:string):Observable<any>{
     this.checkStorage();
-    let token:string|null = localStorage.getItem(STORAGE_ITEM)
-    this.storage = (token)?JSON.parse(token):'';
-
+    let options:any = this.getHeaders();
     let url:string =`${this.apiEndPoint}${this.path}/${_id}`;
-    let headers:HttpHeaders = new HttpHeaders()
-        .set('cache-control','no-cache')
-        .set('x-access-token',this.storage)
-    let options:any = { headers: headers };
     return this.http.delete(url, options)
   }
 
@@ -127,5 +96,18 @@ export abstract class HttpService {
     }
   }
 
+  getHeaders(){
+    let token:string|null = localStorage.getItem(STORAGE_ITEM)
+    this.storage = (token)?JSON.parse(token):'';
+    //Define Heders request
+    new Headers({'cache-control': 'no-cache','x-access-token': this.storage})
+    let headers:HttpHeaders = new HttpHeaders()
+        .set("Content-Type", "application/json")
+        .set("Access-Control-Allow-Origin", "*")
+        .set('cache-control','no-cache')
+        .set('x-access-token',this.storage)
+    let options:any = { headers: headers }
+    return options;
+  }
 
 }
