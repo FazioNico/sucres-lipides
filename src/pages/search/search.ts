@@ -3,7 +3,7 @@
  * @Date:   20-11-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 21-11-2017
+ * @Last modified time: 24-11-2017
  */
 
 import { Component, OnInit, ViewChild } from '@angular/core';
@@ -22,7 +22,8 @@ import { SearchStoreService } from "./store/search-store.service";
 
 @IonicPage({
   name: 'SearchPage',
-  segment: 'search'
+  segment: 'search',
+  defaultHistory: ['HomePage']
 })
 @Component({
   selector: 'page-search',
@@ -42,7 +43,11 @@ export class SearchPage implements OnInit {
   }
 
   ngOnInit() {
-
+    // if(!this.navParams.get('search')){
+    //   return
+    // }
+    // alert('search product ID-> '+ this.navParams.get('search'))
+    // this.queryNumber(this.navParams.get('search'))
   }
 
   ngAfterViewInit() {
@@ -89,7 +94,9 @@ export class SearchPage implements OnInit {
     this.searchStore.dispatchLoadAction({path:data})
   }
 
-  queryNumber(data:number){
+  queryNumber(data:string){
+    //this.searchStore.dispatchFindByIdAction(data)
+    this.navCtrl.push('ProductDetailPage', {id:data})
   }
 
   onPageScroll(event) {

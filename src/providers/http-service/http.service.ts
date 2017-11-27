@@ -3,7 +3,7 @@
 * @Date:   27-09-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 21-11-2017
+ * @Last modified time: 23-11-2017
 */
 
 import { Injectable, Inject } from '@angular/core';
@@ -26,6 +26,7 @@ for more info on providers and Angular 2 DI.
 export abstract class HttpService {
 
   private readonly apiEndPoint:string;
+  private readonly _endPoint:string;
   public path:string = '';
   private storage:any;
 

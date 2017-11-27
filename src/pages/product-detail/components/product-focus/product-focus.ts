@@ -3,7 +3,7 @@
 * @Date:   21-11-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 21-11-2017
+ * @Last modified time: 23-11-2017
 */
 
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
@@ -29,7 +29,7 @@ export class ProductFocusComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.calculeSugar()
+    //this.calculeSugar()
     setTimeout(()=>{
       this.animateSugar()
     }, 800)

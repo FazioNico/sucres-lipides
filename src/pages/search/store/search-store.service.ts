@@ -3,7 +3,7 @@
 * @Date:   21-11-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 22-11-2017
+ * @Last modified time: 23-11-2017
 */
 
 import { Injectable } from '@angular/core';
@@ -26,6 +26,9 @@ export class SearchStoreService extends StoreService {
   dispatchLoadAction(params:{path:string}):void{
     this.dispatchAction(new search.LoadAction(params));
   }
+  dispatchFindByIdAction(params:string):void{
+    this.dispatchAction(new search.FindByIdAction(params));
+  }
   dispatchClearAction():void{
     this.dispatchAction(new search.ClearAction());
   }
@@ -38,5 +41,10 @@ export class SearchStoreService extends StoreService {
   getDatas():Observable<any> {
     return this.storeSelectFeatureState()
     .map((state: any) => state);
+  }
+
+  getDataById(id):Observable<any> {
+    return this.storeSelectFeatureState()
+    .map((state: any) => state.find(p => p.id === id));
   }
 }

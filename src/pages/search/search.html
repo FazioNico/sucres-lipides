@@ -16,7 +16,7 @@
 <ion-content class="search" fullscreen #search>
   <ion-list>
 
-    <ion-item *ngFor="let productData of (storeInfo|async)" (click)="onGoProduct($event,productData)">
+    <button ion-item  *ngFor="let productData of (storeInfo|async)" (click)="onGoProduct($event,productData)">
 
       <ion-thumbnail item-left>
         <div class="img_thumb" *ngIf="productData.image_thumb_url" [style.background-image]="'url(' + productData.image_thumb_url + ')'"></div>
@@ -29,7 +29,7 @@
 
       <ion-icon clear item-right color="secondary" ios="ios-arrow-dropright-circle" md="md-arrow-dropright-circle"></ion-icon>
 
-    </ion-item>
+    </button>
 
   </ion-list>
 </ion-content>

@@ -3,7 +3,7 @@
  * @Date:   15-11-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 21-11-2017
+ * @Last modified time: 22-11-2017
  */
 
 import { Component, OnInit } from '@angular/core';
@@ -16,14 +16,12 @@ import { Observable } from 'rxjs/Observable';
 
 import { AppStateI } from "../store/app-stats";
 
-import { HomePage } from '../pages/home/home';
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp implements OnInit {
 
-  public rootPage:any = HomePage;
+  public rootPage:any;
   public loadingSpinner:Loading;
 
   constructor(
@@ -38,6 +36,7 @@ export class MyApp implements OnInit {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      this.rootPage = 'HomePage'
     });
   }
 

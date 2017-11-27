@@ -2,7 +2,7 @@
 // @Date:   21-11-2017
 // @Email:  contact@nicolasfazio.ch
 // @Last modified by:   webmaster-fazio
-// @Last modified time: 22-11-2017
+// @Last modified time: 24-11-2017
 
 page-product-detail {
 
@@ -20,6 +20,9 @@ page-product-detail {
     color: color($colors, primary);
   }
   .bar-button-md-blanc {
+    color: color($colors, primary);
+  }
+  .ion-md-arrow-back {
     color: color($colors, primary);
   }
   .product {

@@ -7,22 +7,34 @@ Ionic pages and navigation.
 <ion-header id="scrollHeader">
 
   <ion-navbar>
-    <ion-title [class.opacity-content]="titleUnvisible">{{product.product_name}}</ion-title>
+    <ion-title [class.opacity-content]="titleUnvisible">{{(product$| async)?.product_name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content id="product-content">
-  <div>
-    <product-header *ngIf="product" [productDataHeaderInput]="product"></product-header>
-    <product-focus *ngIf="product" [productFocusInput]="product"></product-focus>
+<ion-content id="product-content" >
+  <div *ngIf="product$ | async as product;">
+    <!-- {{ product | json }} -->
+    <div *ngIf="product.id;else productNotFound">
+      <product-header *ngIf="product" [productDataHeaderInput]="product"></product-header>
+      <product-focus *ngIf="product" [productFocusInput]="product"></product-focus>
 
-    <!-- <div class="acc-wrapper">
-      <product-nutriment *ngIf="productData?.nutriments" [nutrimentsInput]="(productData?.nutriments)? productData?.nutriments : []" (onToggle)="onClickToggle($event)"></product-nutriment>
-      <product-ingredient *ngIf="productData?.ingredients" [ingredientsInput]="(productData?.ingredients) ? productData?.ingredients : []"  (onToggle)="onClickToggle($event)"></product-ingredient>
-      <product-additive *ngIf="productData?.additives_tags" [additiveInput]="(productData?.additives_tags) ? productData?.additives_tags : []" (onModalOpen)="onClickModal($event)" (onToggle)="onClickToggle($event)"></product-additive>
-      <product-alergens-traces *ngIf="productData?.traceAndAlergens" [traceAndAlergensInput]="(productData?.traceAndAlergens) ? productData?.traceAndAlergens : []" (onModalOpen)="onClickModal($event)" (onToggle)="onClickToggle($event)"></product-alergens-traces>
-    </div> -->
+      <div class="acc-wrapper">
+        <nutriments [nutrimentsInput]="(product.nutriments)? product.nutriments : []" (onToggle)="onClickToggle($event)"></nutriments>
+        <ingredients [ingredientsInput]="(product?.ingredients) ? product?.ingredients : []"  (onToggle)="onClickToggle($event)"></ingredients>
+        <!-- <product-additive *ngIf="productData?.additives_tags" [additiveInput]="(productData?.additives_tags) ? productData?.additives_tags : []" (onModalOpen)="onClickModal($event)" (onToggle)="onClickToggle($event)"></product-additive>
+        <product-alergens-traces *ngIf="productData?.traceAndAlergens" [traceAndAlergensInput]="(productData?.traceAndAlergens) ? productData?.traceAndAlergens : []" (onModalOpen)="onClickModal($event)" (onToggle)="onClickToggle($event)"></product-alergens-traces> -->
+      </div>
+    </div>
+    <ng-template #productNotFound >
+      <div padding>
+        <h2 ion-text text-center color="primary">Article inconnu</h2>
+        <p text-center>Ce produit n'a pas été trouvé.</p>
+        <br>
+        <button ion-button block outline (click)="onClickBack()" class="btn-block-50">Nouvelle recherche</button>
+      </div>
+    </ng-template>
   </div>
+
 </ion-content>

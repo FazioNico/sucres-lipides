@@ -1,6 +1,6 @@
 <div class="product-header">
-  <div class="product-img" [style.background-image]="'url(' + productDataHeaderInput.image_thumb_url + ')'"></div>
-  <div *ngIf="productDataHeaderInput.product_name " class="transition_anim_5ms">
+  <div *ngIf="productDataHeaderInput?.image_thumb_url" class="product-img" [style.background-image]="'url(' + productDataHeaderInput?.image_thumb_url + ')'"></div>
+  <div *ngIf="productDataHeaderInput?.product_name " class="transition_anim_5ms">
     <h1 padding ion-text color="primary">
       <span class="productTitle">
           {{ productDataHeaderInput.product_name  }}
