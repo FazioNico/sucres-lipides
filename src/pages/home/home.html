@@ -1,3 +1,10 @@
+<!--
+@Author: Nicolas Fazio <webmaster-fazio>
+@Date:   15-11-2017
+@Email:  contact@nicolasfazio.ch
+@Last modified by:   webmaster-fazio
+@Last modified time: 02-12-2017
+-->
 
 <ion-content text-center padding>
   <div class="table">
@@ -8,8 +15,8 @@
       </p>
       <br>
       <div>
-        <p>
-          <button ion-button ion-text color="blanc" (click)="goScan()" large class="btn-block-50 text-secondary"><ion-icon ion-text margin-right color="secondary" name="barcode"></ion-icon> <span ion-text color="secondary">Scan</span></button>
+        <p *ngIf="!isDesktop">
+          <button ion-button ion-text color="blanc" (click)="goScan()" large class="btn-block-50 text-secondary"><ion-icon ion-text margin-right color="secondary" name="barcode"></ion-icon> <span ion-text color="secondary">Scan{{isDesktop}}</span></button>
         </p>
         <p>
           <button ion-button ion-text color="blanc" (click)="goSearch()" large class="btn-block-50 text-secondary"><ion-icon ion-text margin-right color="secondary" name="search"></ion-icon> <span ion-text color="secondary">Recherche</span></button>

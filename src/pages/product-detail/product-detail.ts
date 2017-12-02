@@ -3,7 +3,7 @@
 * @Date:   21-11-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 25-11-2017
+ * @Last modified time: 02-12-2017
 */
 
 import { Component, ViewChild, NgZone } from '@angular/core';
@@ -42,17 +42,19 @@ export class ProductDetailPage {
     private _ngZone: NgZone,
     private productStore: ProductStoreService
   ) {
-    let params = this.navParams.get('data')|this.navParams.get('id')
+    let params:any = this.navParams.get('data')|this.navParams.get('id')
+    // if no params into navParams
     if(!params){
       console.log('no data and no id', this.navParams.get('data'),this.navParams.get('id'))
       window.location.href = './'
       return
     }
+    // if have params...
     (this.navParams.get('data'))
+      // if get full product datas
       ? this.product$ = Observable.of(this.navParams.get('data'))
-      : this.findByID(this.navParams.get('id'))// this.product = this.navParams.get('id');
-    //console.log(this.product)
-
+      // if only have ID product, => do request to get all datas
+      : this.findByID(this.navParams.get('id'));// this.product = this.navParams.get('id');
   }
 
   ngAfterViewInit() {

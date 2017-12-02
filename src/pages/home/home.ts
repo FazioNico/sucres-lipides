@@ -3,13 +3,14 @@
 * @Date:   15-11-2017
 * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 23-11-2017
+ * @Last modified time: 02-12-2017
 */
 
 import { Component } from '@angular/core';
-import { NavController, IonicPage } from 'ionic-angular';
-import { Action, Store } from '@ngrx/store';
+import { IonicPage, NavController, Platform } from 'ionic-angular';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
+import { Store } from '@ngrx/store';
 
 export class IBarcodeData {
   constructor(
@@ -28,37 +29,37 @@ export class IBarcodeData {
 })
 export class HomePage {
 
-  barcodeData: IBarcodeData;
-  scanDetails:any;
+  public isDesktop:boolean = false;
 
   constructor(
     public navCtrl: NavController,
     protected store: Store<any>,
-    private nativeScan:BarcodeScanner
+    private nativeScan:BarcodeScanner,
+    public platform: Platform,
   ) {
-
+    this.platform.ready().then(() => {
+      this.isDesktop = this.platform.is('mobileweb') || this.platform.is( 'core')
+    })
   }
 
-  goSearch(){
+  goSearch():void{
     this.store.dispatch({type:'CLEAR'})
     this.navCtrl.push('SearchPage')
   }
 
-  goScan(){
+  goScan():void{
     this.nativeScan.scan()
     .then((result) => {
       if (!result.cancelled) {
-        const barcodeData = new IBarcodeData(result.text, result.format);
-        //return this.goScanDetails(barcodeData);
-        //return barcodeData;
+        const barcodeData:IBarcodeData = new IBarcodeData(result.text, result.format);
+        // console.log('scan result->', barcodeData)
         this.navCtrl.push('ProductDetailPage',  { id: barcodeData.text })
-        /** to check in template: **/
-        //this.scanDetails = barcodeData;
       }
     })
     .catch((err) => {
-      alert(err);
-      this.navCtrl.push('ProductDetailPage',  { id: '737628064502' })
+      //alert(err);
+      //console.log(err)
+      this.store.dispatch({type:'[Err] Display Requested', payload: {message:err}})
     })
   }
 }
