@@ -38,7 +38,7 @@ export class MyApp implements OnInit {
       statusBar.backgroundColorByHexString("#0288d1");
       splashScreen.hide();
 
-      //this.rootPage = 'HomePage'
+      this.rootPage = 'HomePage'
     });
   }
 
