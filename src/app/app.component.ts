@@ -3,7 +3,7 @@
  * @Date:   15-11-2017
  * @Email:  contact@nicolasfazio.ch
  * @Last modified by:   webmaster-fazio
- * @Last modified time: 22-11-2017
+ * @Last modified time: 02-12-2017
  */
 
 import { Component, OnInit } from '@angular/core';
@@ -12,8 +12,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Store } from '@ngrx/store'
-import { Observable } from 'rxjs/Observable';
-
 import { AppStateI } from "../store/app-stats";
 
 @Component({
@@ -34,9 +32,13 @@ export class MyApp implements OnInit {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
+      statusBar.show();
+      statusBar.overlaysWebView(false);
+      statusBar.styleLightContent();
+      statusBar.backgroundColorByHexString("#0288d1");
       splashScreen.hide();
-      this.rootPage = 'HomePage'
+
+      //this.rootPage = 'HomePage'
     });
   }
 
