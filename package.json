@@ -1,8 +1,8 @@
 {
   "name": "SucresLipides",
   "version": "2.0.0",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Nicolas Fazio",
+  "homepage": "https://nicoalsfazio.ch/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
@@ -47,7 +47,7 @@
     "ngrx-store-freeze": "^0.2.0",
     "typescript": "2.4.2"
   },
-  "description": "An Ionic project",
+  "description": "Ionic Hybrid Application: Découvre la quantité de sucres et lipides contenus dans tes produits alimentaires favoris.",
   "config": {
     "ionic_purge_decorators": false,
     "ionic_webpack": "./tools/config/ionic.webpack.config.js"

@@ -1,6 +1,6 @@
 # Sucres & Lipides
 
-An Ionic 2 multi-platform application to easely check quantity of sugar and fat in food.
+An Ionic multi-platform application to easely check quantity of sugar and fat in food.
 
   ## Overview
   Sucres & Lipides te permet de connaitre facilement la quantité de sucres et de lipides contenu dans les produits alimentaires.
@@ -13,7 +13,9 @@ An Ionic 2 multi-platform application to easely check quantity of sugar and fat 
   - scanner le code barre du produit qui vous intéresse
   - formulaire de recherche par mot clés ou code barre
 
-
+  ## Browser Demo:
+  - [Sucres & Lipides](http://sucres-lipides.nicolasfazio.ch/#/index)
+  
   ## Download:
   - [AppleStore IOS](https://itunes.apple.com/ch/app/sucres-et-lipides/id1155194660)
   - Google Play Android: coming soon
